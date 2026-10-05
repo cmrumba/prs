@@ -71,6 +71,17 @@ You can adjust the time fields to receive notifications at the right moments for
 > 📌 Remember to update these fields on first install so the reminders fire at the correct times.
 
 <hr>
+<img src="images/prs.png" alt="Productivity Assistant logo" width="356" height="475" />
+
+
+
+
+
+
+
+
+
+
 
 
 
