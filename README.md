@@ -210,9 +210,9 @@ Click any date on the calendar to open a popup showing **every PRS entry logged 
 You'll receive a notification when:
 
 - 🟢 **Your WAVE timer is not running during your shift** — a reminder to start tracking time.
-- <img src="images/shift.png" alt="Productivity Assistant logo" width="356" height="475" />
+ <img src="images/shift.png" alt="Productivity Assistant logo" width="356" height="475" />
 - ☕ **The first break begins** — time to pause and step away.
-- <img src="images/break.png" alt="Productivity Assistant logo" width="356" height="475" />
+ <img src="images/break.png" alt="Productivity Assistant logo" width="356" height="475" />
 - ⏱️ **The first break ends** — time to resume tracking.
 - ☕ **The second break begins** — time to pause again.
 - ⏱️ **The second break ends** — time to resume tracking.
