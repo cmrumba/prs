@@ -28,6 +28,7 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 
 **Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
 <hr>
+## The extension's popup functionality
 <img src="images/popup.png" alt="Productivity Assistant logo" width="410" height="832" />
 ## 🚀 Quick Actions
 
@@ -71,8 +72,42 @@ You can adjust the time fields to receive notifications at the right moments for
 > 📌 Remember to update these fields on first install so the reminders fire at the correct times.
 
 <hr>
+## The extension's PRS widget functionality
 <img src="images/prs.png" alt="Productivity Assistant logo" width="356" height="475" />
+## 📅 PRS Productivity Calendar
 
+The PRS widget embeds itself directly on the PRS webpage when you open the **productivity / create** page.
+
+### 🗓️ Calendar View
+
+- Displays the **current month** at a glance.
+- **Navigate to previous months** to review your history.
+- **Auto-syncs** with the background scraper, which walks through every page of your productivity table so the calendar always reflects what's actually logged.
+
+### 🎨 Color-Coded Days
+
+| Color | Meaning |
+|---|---|
+| 🟢 **Green** | A PRS entry has been filled for that day |
+| 🔴 **Red** | Weekday with **no** PRS entry |
+| 🟡 **Yellow** | Multiple entries on the same day, or a warning state |
+| 🔵 **Blue** | Saturday worked (more than 2 hours) |
+| ⚪ **Gray** | Weekend, older, or upcoming day |
+
+### 💰 Estimated Payout
+
+The widget also shows an **estimated payout** for the current month, computed from the standard daily rate for the current pay period.
+
+> ⚠️ **The figure is an estimate.**
+>
+> - 📉 It may be **lower** if you don't meet the metrics set for your project.
+> - 📈 It may be **higher** if you exceed the target.
+
+### 🚧 Work in Progress
+
+> The PRS widget is still **under active development**. If you notice any discrepancy in the calculations, please **notify the developer** so it can be corrected.
+
+<hr>
 
 
 
