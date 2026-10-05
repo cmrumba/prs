@@ -65,9 +65,8 @@ Both functionalities share the same storage, popup, and service worker. You can 
 <table>
   <tr>
     <th width="50%">Method 1 — `.crx` Drag & Drop <em>(quickest)</em></th>
-    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
   </tr>
-  <tr valign="top">
+  <tr>
     <td>
 
 1. Download the `.crx` file from the [**Releases**](../../) page.
@@ -76,39 +75,12 @@ Both functionalities share the same storage, popup, and service worker. You can 
 4. **Drag** the `.crx` file onto the page.
 5. Confirm the prompt.
 6. The extension icon appears in the toolbar.
->⚠️ Chrome may block `.crx` files for non-Web-Store extensions. If that happens, use **Method 2**.
-
-    </td>
-    <td>
-
-1. Download the `.zip` from the [**Releases**](../../) page.
-2. Extract it to a permanent folder.
-3. Open `chrome://extensions` (or Click Settings -> then click Extensions).
-4. Enable **Developer mode** (top-right toggle).
-5. Click **Load unpacked**.
-6. Select the extracted folder.
-7. The extension icon appears in the toolbar.
- >✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.
+⚠️ Chrome may block `.crx` files for non-Web-Store extensions. If that happens, use **Method 2**.
 
     </td>
   </tr>
 
 
-  <tr>
-    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
-  </tr>
-  <tr valign="top">
-    <td>
-1. Download the `.zip` from the [**Releases**](../../) page.
-2. Extract it to a permanent folder.
-3. Open `chrome://extensions` (or Click Settings -> then click Extensions).
-4. Enable **Developer mode** (top-right toggle).
-5. Click **Load unpacked**.
-6. Select the extracted folder.
-7. The extension icon appears in the toolbar.
- >✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.
-    </td>
-  </tr>
 </table>
 
 
