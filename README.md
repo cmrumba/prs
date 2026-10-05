@@ -27,7 +27,7 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 ## 📖 Overview
 
 **Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
-
+<hr>
 <img src="images/popup.png" alt="Productivity Assistant logo" width="120" height="120" />
 ## 🚀 Quick Actions
 
@@ -70,7 +70,7 @@ You can adjust the time fields to receive notifications at the right moments for
 
 > 📌 Remember to update these fields on first install so the reminders fire at the correct times.
 
-
+<hr>
 
 
 
