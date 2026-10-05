@@ -92,6 +92,23 @@ Both functionalities share the same storage, popup, and service worker. You can 
 
     </td>
   </tr>
+
+
+  <tr>
+    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
+  </tr>
+  <tr valign="top">
+    <td>
+1. Download the `.zip` from the [**Releases**](../../) page.
+2. Extract it to a permanent folder.
+3. Open `chrome://extensions` (or Click Settings -> then click Extensions).
+4. Enable **Developer mode** (top-right toggle).
+5. Click **Load unpacked**.
+6. Select the extracted folder.
+7. The extension icon appears in the toolbar.
+ >✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.
+    </td>
+  </tr>
 </table>
 
 ### 📋 Before You Begin
