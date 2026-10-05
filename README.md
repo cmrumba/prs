@@ -227,14 +227,14 @@ Both functionalities share the same storage, popup, and service worker. You can 
       <p>Automatic <b>25th &rarr; 24th</b> pay-period math:</p>
       <ul>
         <li><b>Days present</b> — weekdays filled + qualifying Saturdays</li>
-        <li><b>Daily rate</b> — <code>KES 25,000 &divide; weekdays in period</code></li>
+        <li><b>Daily rate</b> — <code>monthly pay &divide; weekdays in period</code></li>
         <li><b>Payroll</b> — <code>daysPresent &times; dailyRate</code></li>
       </ul>
       <p>Previous pay period hides during the 1st–24th window.</p>
     </td>
     <td width="50%" valign="top">
       <h4>🔄 Background Sync</h4>
-      <p>The extension silently opens a hidden list-page tab, scrapes <b>every page</b> of your productivity table, aggregates rows by <code>(task, date)</code>, and syncs the calendar — no manual action required.</p>
+      <p>The extension silently scrapes your productivity table, aggregates rows by <code>(date)</code>, and syncs the calendar.</p>
     </td>
   </tr>
 </table>
@@ -243,7 +243,7 @@ Both functionalities share the same storage, popup, and service worker. You can 
 
 ### ⏰ WAVE Timer Reminder
 
-A **self-healing Chrome extension** that reminds you to start, pause, and stop your WAVE timer — based on your shift and break schedule.
+The Chrome extension reminds you to start, pause, and stop your WAVE timer — based on your shift and break schedule.
 
 > Everything the WAVE functionality does revolves around **one boolean** stored in `chrome.storage.local`: **`workingStatus`**.
 
@@ -268,17 +268,14 @@ The content script observes two buttons on the WAVE page:
 | `trackBtn` visible + `"Start Tracking"` | ⚪ **`false`** |
 | `trackBtn` visible + transition `"Stop Tracking"` → `"Start Tracking"` | ⚪ **`false`** |
 
-> On page load, both buttons are evaluated **immediately**, again at **+1 s**, and again at **+3 s** — so the state is captured even if the page re-renders after first paint.
-
 #### 📅 The Schedule
 
 | Window | Default |
 |---|---|
-| 🕗 **Shift** | `20:00` → `05:00` |
+| 🕗 **Night Shift** | `20:00` → `05:00` |
 | ☕ **First break** | `00:00` → `00:30` |
 | ☕ **Second break** | `02:30` → `03:00` |
 
-All comparisons use **minutes-since-midnight**. Overnight windows are supported. Editable in the popup.
 
 #### ⏱️ Alarms
 
@@ -286,8 +283,6 @@ All comparisons use **minutes-since-midnight**. Overnight windows are supported.
 |---|:---:|---|
 | 🔔 `timerWatch` | **1 min** | Fires schedule-event checks; ensures `statusCheck` exists; runs `checkStatus()` |
 | 🔔 `statusCheck` | **5 min** *(or 10 after shift end)* | Fires the periodic reminders |
-
-Both alarms are created at every service-worker boot, on browser start, on install/update, and on every `timerWatch` tick (self-heal).
 
 #### 🔔 Notifications
 
@@ -319,19 +314,6 @@ All notifications are **Windows-native Chrome notifications** with two buttons: 
 | 🅱️ **Post-shift working** | After shift end + `workingStatus === true` | **🌇 Shift ended at {HH:MM}…** (10-min cadence) |
 | 🅲 **Outside shift, idle** | Outside shift + `workingStatus === false` + not during break | No notification (alarm stays armed) |
 
-#### 💤 Idle Detection
-
-```javascript
-chrome.idle.setDetectionInterval(60);
-chrome.idle.onStateChanged.addListener((newState) => {
-  if (newState === "active") {
-    checkStatus();
-    checkScheduleEvents();
-  }
-});
-```
-
-When the user **unlocks their screen**, both checks run immediately.
 
 #### ✍️ WAVE Auto-Fill
 
