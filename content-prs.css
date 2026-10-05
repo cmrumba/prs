@@ -1,0 +1,1482 @@
+/* =========================================================
+   GLOSSY BLUE PRODUCTIVITY PANEL
+   Inspired by classic web 2.0 aqua / glass buttons
+   ========================================================= */
+
+#pmp-ext-panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+
+  width: 350px;
+  min-width: 280px;
+  max-width: calc(100vw - 24px);
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  color: #eaf3fb;
+
+  /* Deep blue base with a subtle vertical gloss */
+  background:
+    linear-gradient(
+      180deg,
+      #3a6ea5 0%,
+      #2b5d94 45%,
+      #244f82 100%
+    );
+
+  border: 1px solid #1a3f6b;
+  border-radius: 14px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.35);
+
+  animation: pmp-edge-open 0.18s ease-out;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 46px;
+  padding: 0 10px 0 16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #4a86bd 0%,
+      #34689e 50%,
+      #2a5a8e 100%
+    );
+
+  border-bottom: 1px solid #1a3f6b;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.18);
+
+  cursor: move;
+  user-select: none;
+}
+
+#pmp-ext-panel .pmp-ext-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border-radius: 14px 14px 0 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-title {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+  text-transform: none;
+
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#pmp-ext-panel .pmp-ext-title::before {
+  content: "✓";
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #6fa8d8 0%,
+      #4a86bd 50%,
+      #2f6aa0 100%
+    );
+
+  border: 1px solid #1f4f7d;
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-close {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border: 1px solid #1f4f7d;
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #5b95c9 0%,
+      #3a76ab 50%,
+      #2a5a8e 100%
+    );
+
+  color: #eaf3fb;
+
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.08s ease;
+}
+
+#pmp-ext-panel .pmp-ext-close:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #75aad6 0%,
+      #4a86bd 50%,
+      #34689e 100%
+    );
+  color: #ffffff;
+}
+
+#pmp-ext-panel .pmp-ext-close:active {
+  background:
+    linear-gradient(
+      180deg,
+      #2a5a8e 0%,
+      #34689e 50%,
+      #2a5a8e 100%
+    );
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.35),
+    0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-body {
+  padding: 15px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2f6196 0%,
+      #28578a 100%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-field {
+  margin-bottom: 13px;
+}
+
+#pmp-ext-panel .pmp-ext-field:last-child {
+  margin-bottom: 0;
+}
+
+#pmp-ext-panel label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #d6e6f5;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   SELECTS + NUMBER INPUT
+   ========================================================= */
+
+#pmp-ext-panel select,
+#pmp-ext-panel input[type="number"] {
+  display: block;
+
+  width: 100%;
+  min-height: 36px;
+
+  box-sizing: border-box;
+
+  padding: 7px 12px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2a5a8e 0%,
+      #234f80 100%
+    );
+
+  border: 1px solid #1a3f6b;
+  border-radius: 18px;
+
+  outline: none;
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.15);
+
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+#pmp-ext-panel select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    linear-gradient(180deg, #2a5a8e 0%, #234f80 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23cfe3f5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, right 12px center;
+  background-size: 100% 100%, 10px 6px;
+  padding-right: 30px;
+}
+
+#pmp-ext-panel select:hover,
+#pmp-ext-panel input[type="number"]:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #31679e 0%,
+      #27588c 100%
+    );
+  border-color: #2f6aa0;
+}
+
+#pmp-ext-panel select:focus,
+#pmp-ext-panel input[type="number"]:focus {
+  border-color: #7fb3dd;
+
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.35),
+    0 0 0 2px rgba(127, 179, 221, 0.5),
+    0 0 8px rgba(127, 179, 221, 0.45);
+}
+
+#pmp-ext-panel select option {
+  background: #234f80;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DATE SECTION
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-date-row {
+  display: grid;
+
+  grid-template-columns:
+    0.75fr
+    1.35fr
+    0.9fr;
+
+  gap: 7px;
+
+  margin-top: 2px;
+  padding: 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #295a8d 0%,
+      #234f80 100%
+    );
+
+  border: 1px solid #1a3f6b;
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#pmp-ext-panel .pmp-ext-date-row .pmp-ext-field {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+#pmp-ext-panel .pmp-ext-date-row label {
+  font-size: 10px;
+  color: #bcd4e8;
+}
+
+#pmp-ext-panel .pmp-ext-date-row select {
+  min-height: 34px;
+
+  padding: 6px 6px;
+  padding-right: 24px;
+
+  background-position: 0 0, right 8px center;
+  background-size: 100% 100%, 9px 5px;
+
+  font-size: 11px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   ACTION AREA
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-actions {
+  margin-top: 16px;
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   SAVE BUTTON — glossy aqua
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-save {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 42px;
+
+  padding: 9px 16px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #6fa8d8 0%,
+      #4a86bd 48%,
+      #2f6aa0 100%
+    );
+
+  border: 1px solid #1f4f7d;
+  border-radius: 22px;
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.35);
+
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 0 8px rgba(255, 255, 255, 0.15);
+
+  overflow: hidden;
+
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.08s ease;
+}
+
+#pmp-ext-panel .pmp-ext-save::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 2px;
+  height: 45%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-save:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #82b6e0 0%,
+      #5893c9 48%,
+      #3673a9 100%
+    );
+}
+
+#pmp-ext-panel .pmp-ext-save:active {
+  background:
+    linear-gradient(
+      180deg,
+      #2f6aa0 0%,
+      #4a86bd 48%,
+      #6fa8d8 100%
+    );
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.35),
+    0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+/* =========================================================
+   CALENDAR
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-calendar {
+  margin-top: 14px;
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* --- Navigation bar (back / forward month) --- */
+#pmp-ext-panel .pmp-ext-cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  padding: 0 2px;
+
+  gap: 8px;
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-month {
+  flex: 1;
+  min-width: 0;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+  text-align: left;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 10px;
+
+  color: #eaf3fb;
+
+  background:
+    linear-gradient(
+      180deg,
+      #5b95c9 0%,
+      #3a76ab 50%,
+      #2a5a8e 100%
+    );
+
+  border: 1px solid #1f4f7d;
+  border-radius: 14px;
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.22),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.08s ease,
+    color 0.12s ease;
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-btn:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #75aad6 0%,
+      #4a86bd 50%,
+      #34689e 100%
+    );
+  color: #ffffff;
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-btn:active {
+  background:
+    linear-gradient(
+      180deg,
+      #2a5a8e 0%,
+      #34689e 50%,
+      #2a5a8e 100%
+    );
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 rgba(0, 0, 0, 0);
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-btn .pmp-ext-cal-nav-arrow {
+  font-size: 9px;
+  line-height: 1;
+}
+
+#pmp-ext-panel .pmp-ext-cal-nav-btn .pmp-ext-cal-nav-label {
+  font-size: 10px;
+  line-height: 1;
+}
+
+
+/* --- Month grid --- */
+#pmp-ext-panel .pmp-ext-cal-months {
+  display: flex;
+  gap: 12px;
+}
+
+#pmp-ext-panel .pmp-ext-cal-month {
+  flex: 1;
+  min-width: 0;
+}
+
+#pmp-ext-panel .pmp-ext-cal-month-title {
+  margin-bottom: 6px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+#pmp-ext-panel .pmp-ext-cal-dow {
+  padding: 3px 0;
+
+  color: #a9c6df;
+
+  font-size: 9px;
+  font-weight: 800;
+  text-align: center;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   DAY CELLS — glossy pills
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-cal-day {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 24px;
+
+  padding: 3px 2px;
+
+  color: #ffffff;
+
+  /* default: medium blue glossy */
+  background:
+    linear-gradient(
+      180deg,
+      #5b95c9 0%,
+      #3a76ab 50%,
+      #2a5a8e 100%
+    );
+
+  border: 1px solid #1f4f7d;
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-align: center;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.22),
+    0 1px 2px rgba(0, 0, 0, 0.28);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.08s ease;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  height: 45%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border-radius: 5px 5px 4px 4px;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.22),
+    0 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Empty leading/trailing cells */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-empty {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  cursor: default;
+  pointer-events: none;
+  min-height: 24px;
+  box-shadow: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-empty::before {
+  display: none;
+}
+
+
+/* ---------- RED  -> prsFilled === "no"  (current-month weekday) ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-red {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e08585 0%,
+      #c85a5a 50%,
+      #a83a3e 100%
+    );
+
+  border-color: #7d2b2f;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-red:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #eb9a9a 0%,
+      #d36a6a 50%,
+      #b8464b 100%
+    );
+}
+
+
+/* ---------- GREEN  -> prsFilled === "yes" ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-green {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #7fce93 0%,
+      #4ea566 50%,
+      #2f7a45 100%
+    );
+
+  border-color: #235e34;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-green:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #93dba5 0%,
+      #5cb574 50%,
+      #388d51 100%
+    );
+}
+
+
+/* ---------- SATURDAY WORKED (bluish highlight) ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-saturday-worked {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #82b6e0 0%,
+      #4f96c8 50%,
+      #1e6fa8 100%
+    );
+
+  border-color: #144f7d;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-saturday-worked:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #96c6e8 0%,
+      #5fa5d4 50%,
+      #2a82bd 100%
+    );
+}
+
+
+/* ---------- WEEKEND  -> Saturday / Sunday, no entry ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-weekend {
+  color: #4a5b6b;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4f8fb 0%,
+      #d9dee2 50%,
+      #c2c9cf 100%
+    );
+
+  border-color: #a9b2b9;
+
+  cursor: default;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-weekend:hover {
+  transform: none;
+  background:
+    linear-gradient(
+      180deg,
+      #f4f8fb 0%,
+      #d9dee2 50%,
+      #c2c9cf 100%
+    );
+}
+
+
+/* ---------- OLDER  -> previous month, weekday, no entry ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-older {
+  color: #6b7780;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e3e8ec 0%,
+      #c4ccd2 50%,
+      #b0b8bf 100%
+    );
+
+  border-color: #9aa3aa;
+
+  cursor: default;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-older:hover {
+  transform: none;
+  background:
+    linear-gradient(
+      180deg,
+      #e3e8ec 0%,
+      #c4ccd2 50%,
+      #b0b8bf 100%
+    );
+}
+
+
+/* ---------- DISABLED  -> upcoming weekdays ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-disabled {
+  color: #5a656d;
+
+  background:
+    linear-gradient(
+      180deg,
+      #c8ced3 0%,
+      #a8b0b6 50%,
+      #939ba1 100%
+    );
+
+  border-color: #848c92;
+
+  cursor: default;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-disabled:hover {
+  transform: none;
+  background:
+    linear-gradient(
+      180deg,
+      #c8ced3 0%,
+      #a8b0b6 50%,
+      #939ba1 100%
+    );
+}
+
+
+/* ---------- LOCKED  -> previous month viewed after day 4 ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked {
+  cursor: default;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked:hover {
+  transform: none;
+}
+
+
+/* ---------- RED SUNDAY  -> Sunday with prsFilled === "yes" ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-sunday-filled {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e08585 0%,
+      #c85a5a 50%,
+      #a83a3e 100%
+    );
+
+  border-color: #7d2b2f;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-sunday-filled:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #eb9a9a 0%,
+      #d36a6a 50%,
+      #b8464b 100%
+    );
+}
+
+
+/* ---------- YELLOW  -> elongated break (> 1h) ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-elongated-break {
+  color: #4a3a00;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffe680 0%,
+      #f4d03f 50%,
+      #d4ac0d 100%
+    );
+
+  border-color: #a88600;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-elongated-break:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #fff0a8 0%,
+      #f7dc6f 50%,
+      #dcb616 100%
+    );
+}
+
+
+/* ---------- YELLOW  -> excess hours (> 11h) ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-excess-hours {
+  color: #4a3a00;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffe680 0%,
+      #f4d03f 50%,
+      #d4ac0d 100%
+    );
+
+  border-color: #a88600;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-excess-hours:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #fff0a8 0%,
+      #f7dc6f 50%,
+      #dcb616 100%
+    );
+}
+
+
+/* ---------- Filled weekend stays green ---------- */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-weekend.pmp-ext-cal-green {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-weekend.pmp-ext-cal-green:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #93dba5 0%,
+      #5cb574 50%,
+      #388d51 100%
+    );
+  transform: translateY(-1px);
+}
+
+/* Filled weekend inside a locked month stays green but non-clickable. */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-green {
+  cursor: default;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-green:hover {
+  transform: none;
+}
+
+/* Locked + Saturday worked: keep bluish, but non-clickable. */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-saturday-worked {
+  cursor: default;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-saturday-worked:hover {
+  transform: none;
+}
+
+/* Locked yellow warnings — stay yellow, non-clickable. */
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-elongated-break,
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-excess-hours {
+  cursor: default;
+  pointer-events: none;
+}
+
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-elongated-break:hover,
+#pmp-ext-panel .pmp-ext-cal-day.pmp-ext-cal-locked.pmp-ext-cal-excess-hours:hover {
+  transform: none;
+}
+
+
+/* =========================================================
+   PAYROLL SUMMARY
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-cal-total {
+  margin-top: 14px;
+  padding: 12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #295a8d 0%,
+      #234f80 100%
+    );
+
+  border: 1px solid #1a3f6b;
+  border-radius: 12px;
+
+  color: #dbeaf7;
+
+  font-size: 11px;
+  line-height: 1.45;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+#pmp-ext-panel .pmp-ext-payroll-block {
+  margin-bottom: 4px;
+}
+
+#pmp-ext-panel .pmp-ext-payroll-title {
+  color: #a9c6df;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-payroll-period {
+  margin-top: 2px;
+  margin-bottom: 6px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+#pmp-ext-panel .pmp-ext-payroll-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin: 3px 0;
+}
+
+#pmp-ext-panel .pmp-ext-payroll-row span {
+  color: #a9c6df;
+}
+
+#pmp-ext-panel .pmp-ext-payroll-row strong {
+  color: #9df0b5;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-shadow:
+    0 0 6px rgba(157, 240, 181, 0.4),
+    0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+#pmp-ext-panel .pmp-ext-payroll-note {
+  margin-top: 4px;
+
+  color: #8fb0cc;
+
+  font-size: 10px;
+  font-style: italic;
+}
+
+#pmp-ext-panel .pmp-ext-payroll-divider {
+  margin: 10px 0 8px;
+
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   DAY DETAIL POPUP
+   ========================================================= */
+
+#pmp-ext-panel .pmp-ext-day-popup {
+  position: absolute;
+
+  z-index: 2147483647;
+
+  min-width: 160px;
+
+  padding: 10px 12px;
+
+  color: #eaf3fb;
+
+  background:
+    linear-gradient(
+      180deg,
+      #3a6ea5 0%,
+      #2a5a8e 100%
+    );
+
+  border: 1px solid #1a3f6b;
+  border-radius: 10px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 8px 22px rgba(0, 0, 0, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.35);
+
+  font-size: 11px;
+}
+
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-bottom: 4px;
+}
+
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-row:last-child {
+  margin-bottom: 0;
+}
+
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-label {
+  color: #a9c6df;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-value {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Saturday worked info line */
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-info {
+  margin-top: 8px;
+
+  padding-top: 7px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: #9fd6ff;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+
+  text-shadow: 0 0 6px rgba(159, 214, 255, 0.4);
+}
+
+/* Yellow warning line */
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-warning {
+  margin-top: 8px;
+
+  padding-top: 7px;
+
+  border-top: 1px solid rgba(255, 213, 79, 0.35);
+
+  color: #ffe680;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+
+  text-shadow: 0 0 6px rgba(255, 230, 128, 0.5);
+}
+
+/* Sunday warning */
+#pmp-ext-panel .pmp-ext-day-popup .pmp-ext-popup-error {
+  margin-top: 8px;
+
+  padding-top: 7px;
+
+  border-top: 1px solid rgba(255, 138, 128, 0.4);
+
+  color: #ff8a80;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+
+  text-shadow: 0 0 6px rgba(255, 138, 128, 0.4);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+#pmp-ext-panel ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#pmp-ext-panel ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+#pmp-ext-panel ::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      #5b95c9 0%,
+      #34689e 100%
+    );
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#pmp-ext-panel ::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      #75aad6 0%,
+      #4a86bd 100%
+    );
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  #pmp-ext-panel {
+    top: 8px !important;
+    right: 8px !important;
+    left: 8px !important;
+
+    width: auto;
+    max-width: none;
+
+    border-radius: 12px;
+  }
+
+  #pmp-ext-panel .pmp-ext-header {
+    border-radius: 12px 12px 0 0;
+  }
+
+  #pmp-ext-panel .pmp-ext-body {
+    padding: 13px;
+  }
+
+  #pmp-ext-panel .pmp-ext-header {
+    padding-left: 13px;
+  }
+
+  #pmp-ext-panel .pmp-ext-date-row {
+    gap: 5px;
+    padding: 8px;
+  }
+
+  #pmp-ext-panel .pmp-ext-date-row select {
+    padding-left: 4px;
+    padding-right: 20px;
+  }
+}
+
+
+/* =========================================================
+   OPEN ANIMATION
+   ========================================================= */
+
+@keyframes pmp-edge-open {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pmp-ext-panel,
+  #pmp-ext-panel * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

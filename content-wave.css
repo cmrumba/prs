@@ -1,0 +1,153 @@
+/* Windows-style popup notification — themed to match popup.html */
+.timer-reminder-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background: linear-gradient(180deg, #4a7bb5 0%, #3a6ba5 60%, #2f5a92 100%);
+  border: 1px solid #2d5080;
+  border-radius: 10px;
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2147483647;
+  overflow: hidden;
+  transform: translateX(400px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #eaf2ff;
+}
+
+.timer-reminder-popup.timer-reminder-show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.timer-reminder-popup.timer-reminder-hide {
+  transform: translateX(400px);
+  opacity: 0;
+}
+
+.timer-reminder-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(180deg, #6f9dd0 0%, #5a8bc0 50%, #4a7bb5 100%);
+  border-bottom: 1px solid #2d5080;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  gap: 8px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.timer-reminder-icon {
+  font-size: 18px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
+}
+
+.timer-reminder-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.timer-reminder-close {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2d5080;
+  border-top-color: #b8d4ef;
+  background: linear-gradient(180deg, #8fb8e0 0%, #5a8bc0 50%, #3f74ae 100%);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+  padding: 0;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.timer-reminder-close:hover {
+  background: linear-gradient(180deg, #e07a86 0%, #d24a58 50%, #b8303d 100%);
+  border-color: #7a1a24;
+  border-top-color: #f0a0a8;
+}
+
+.timer-reminder-close:active {
+  background: linear-gradient(180deg, #b8303d 0%, #d24a58 50%, #e07a86 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(1px);
+}
+
+.timer-reminder-body {
+  padding: 16px;
+  font-size: 14px;
+  color: #eaf2ff;
+  line-height: 1.5;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.timer-reminder-footer {
+  padding: 8px 16px 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.timer-reminder-btn {
+  padding: 7px 16px;
+  background: linear-gradient(180deg, #8fb8e0 0%, #5a8bc0 50%, #3f74ae 100%);
+  color: #ffffff;
+  border: 1px solid #2d5080;
+  border-top-color: #b8d4ef;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15),
+    0 2px 3px rgba(0, 0, 0, 0.25);
+  transition: all 0.1s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.timer-reminder-btn:hover {
+  background: linear-gradient(180deg, #a0c5e8 0%, #6b9bd0 50%, #4a82bd 100%);
+}
+
+.timer-reminder-btn:active {
+  background: linear-gradient(180deg, #3f74ae 0%, #5a8bc0 50%, #8fb8e0 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(1px);
+}
+
+@media (prefers-color-scheme: light) {
+  .timer-reminder-popup {
+    color: #eaf2ff;
+  }
+}

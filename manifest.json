@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Assistant",
+  "version": "2.0",
+  "description": "PRS auto-fills, PRS calendar sync, WAVE timer reminders, shift scheduling, and productivity dropdown autofill — all in one.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications",
+    "alarms",
+    "scripting",
+    "idle"
+  ],
+  "host_permissions": [
+    "http://pmp.digitaldividedata.com/*",
+    "http://56.228.51.27:8080/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Productivity Assistant"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://pmp.digitaldividedata.com:8111/prs/index.php?r=productivity/create*"
+      ],
+      "js": ["content-prs-create.js"],
+      "css": ["content-prs.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "http://pmp.digitaldividedata.com:8111/prs/index.php?r=productivity*"
+      ],
+      "exclude_matches": [
+        "http://pmp.digitaldividedata.com:8111/prs/index.php?r=productivity/create*"
+      ],
+      "js": ["content-prs-list.js", "content-prs-create.js"],
+      "css": ["content-prs.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://56.228.51.27:8080/employee/fill-productivity*"],
+      "js": ["content-wave.js"],
+      "css": ["content-wave.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {
+    "32": "images/logo32.png",
+    "48": "images/logo64.png",
+    "128": "images/logo128.png"
+  }
+}
