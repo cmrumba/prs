@@ -28,7 +28,7 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 
 **Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
 <hr>
-<img src="images/popup.png" alt="Productivity Assistant logo" width="120" height="120" />
+<img src="images/popup.png" alt="Productivity Assistant logo" width="410" height="832" />
 ## 🚀 Quick Actions
 
 - **🚀 Launch WAVE** — opens the WAVE site in a single click.
