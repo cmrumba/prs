@@ -190,7 +190,7 @@ The widget also shows an **estimated payout** for the current month, computed fr
 
 <img src="images/hours.png" alt="Productivity Assistant logo" width="356" height="475" />
 
-Click any date on the calendar to open a popup showing **every PRS entry logged for that day** — no need to open the list page or search manually.
+Click any date on the calendar to open a popup showing **every PRS entry logged for that day**
 
 ### What You'll See
 
@@ -203,6 +203,32 @@ Click any date on the calendar to open a popup showing **every PRS entry logged 
 > 💡 A yellow day isn't just a colour — it's a signal. Open it to see which condition triggered the warning and correct the entry if needed.
 
 <hr>
+## 🔔 Notifications
+
+### ⏰ WAVE Notifications
+
+You'll receive a notification when:
+
+- 🟢 **Your WAVE timer is not running during your shift** — a reminder to start tracking time.
+- <img src="images/shift.png" alt="Productivity Assistant logo" width="356" height="475" />
+- ☕ **The first break begins** — time to pause and step away.
+- <img src="images/break.png" alt="Productivity Assistant logo" width="356" height="475" />
+- ⏱️ **The first break ends** — time to resume tracking.
+- ☕ **The second break begins** — time to pause again.
+- ⏱️ **The second break ends** — time to resume tracking.
+- 🌇 **The shift ends** — a reminder to stop the timer.
+- 🔁 **Every 10 minutes after the shift has ended** — while you are still tracking time.
+- ⚠️ **You try to stop the timer during a shift** — instead of pausing for a break.
+
+### 📋 PRS Notifications
+
+You'll receive a notification when:
+
+- 🕔 **The shift ends** — a reminder to fill in your PRS entry.
+
+<hr>
+
+
 
 
 
