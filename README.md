@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="images/logo.png" alt="Productivity Assistant logo" width="120" height="120" />
+<img src="images/logo128.png" alt="Productivity Assistant logo" width="120" height="120" />
 
 # 🧩 Productivity Assistant
 
-**A glossy, productivity-boosting Chrome/Edge extension for PRS and WAVE.**
+**Productivity-boosting Chrome extension for PRS and WAVE.**
 
-Remembers your form selections · auto-fills your daily productivity entries · paints a live payroll calendar · reminds you to start, pause, and stop your WAVE timer.
+Remembers your form selections · auto-fills your daily productivity entries · paints a live payroll calendar · reminds you to start, pause, and stop your WAVE timer and Fill your PRS entries.
 
 <br />
 
