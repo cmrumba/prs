@@ -478,37 +478,7 @@ The popup is **shared by both functionalities** and shows:
 
 > Any click anywhere in the popup **clears all extension notifications**.
 
----
 
-## 🏗️ Architecture
-
-<table>
-  <tr>
-    <th>Component</th>
-    <th>File</th>
-    <th>Role</th>
-  </tr>
-  <tr>
-    <td>🔧 **Service Worker**</td>
-    <td>`background.js`</td>
-    <td>Owns the schedule, the state, and all notifications</td>
-  </tr>
-  <tr>
-    <td>🌐 **Content Scripts**</td>
-    <td>`prs-content.js` · `wave-content.js`</td>
-    <td>Injected into the PRS / WAVE pages; observe DOM, mirror state into storage</td>
-  </tr>
-  <tr>
-    <td>🪟 **Popup**</td>
-    <td>`popup.html` / `popup.js`</td>
-    <td>Shows current status, current selections, and shift/break editors</td>
-  </tr>
-  <tr>
-    <td>🎨 **Styles**</td>
-    <td>`styles.css`</td>
-    <td>Glossy popup theme and in-page widget styling</td>
-  </tr>
-</table>
 
 
 ---
@@ -567,7 +537,7 @@ The popup is **shared by both functionalities** and shows:
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing - Developer notes
 
 Contributions are welcome!
 
@@ -576,7 +546,37 @@ Contributions are welcome!
 3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+---
 
+## 🏗️ Architecture
+
+<table>
+  <tr>
+    <th>Component</th>
+    <th>File</th>
+    <th>Role</th>
+  </tr>
+  <tr>
+    <td>🔧 **Service Worker**</td>
+    <td>`background.js`</td>
+    <td>Owns the schedule, the state, and all notifications</td>
+  </tr>
+  <tr>
+    <td>🌐 **Content Scripts**</td>
+    <td>`prs-content.js` · `wave-content.js`</td>
+    <td>Injected into the PRS / WAVE pages; observe DOM, mirror state into storage</td>
+  </tr>
+  <tr>
+    <td>🪟 **Popup**</td>
+    <td>`popup.html` / `popup.js`</td>
+    <td>Shows current status, current selections, and shift/break editors</td>
+  </tr>
+  <tr>
+    <td>🎨 **Styles**</td>
+    <td>`styles.css`</td>
+    <td>Glossy popup theme and in-page widget styling</td>
+  </tr>
+</table>
 ---
 ---
 
