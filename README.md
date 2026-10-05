@@ -69,38 +69,33 @@ Both functionalities share the same storage, popup, and service worker. You can 
   </tr>
   <tr valign="top">
     <td>
-
-1. Download the `.crx` file from the [**Releases**](../../) page.
-2. Open `chrome://extensions` (or Click Settings -> then click Extensions).
-3. Enable **Developer mode** (top-right toggle).
-4. **Drag** the `.crx` file onto the page.
-5. Confirm the prompt.
-6. The extension icon appears in the toolbar.
-
-<details open>
-<summary>⚠️ <b>Chrome may block .crx files for non-Web-Store extensions.</b></summary>
-If that happens, use <b>Method 2</b>.
-</details>
-
+      <ol>
+        <li>Download the <code>.crx</code> file from the <a href="../../"><b>Releases</b></a> page.</li>
+        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
+        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
+        <li><b>Drag</b> the <code>.crx</code> file onto the page.</li>
+        <li>Confirm the prompt.</li>
+        <li>The extension icon appears in the toolbar.</li>
+      </ol>
+      <hr>
+      <p>⚠️ Chrome may block <code>.crx</code> files for non-Web-Store extensions. If that happens, use <b>Method 2</b>.</p>
     </td>
     <td>
-
-1. Download the `.zip` from the [**Releases**](../../) page.
-2. Extract it to a permanent folder.
-3. Open `chrome://extensions` (or Click Settings -> then click Extensions).
-4. Enable **Developer mode** (top-right toggle).
-5. Click **Load unpacked**.
-6. Select the extracted folder.
-7. The extension icon appears in the toolbar.
-
-<details open>
-<summary>✅ <b>Platform Compatibility</b></summary>
-Works on all platforms, easier to update manually, and won't be blocked by Chrome.
-</details>
-
+      <ol>
+        <li>Download the <code>.zip</code> from the <a href="../../"><b>Releases</b></a> page.</li>
+        <li>Extract it to a permanent folder.</li>
+        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
+        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
+        <li>Click <b>Load unpacked</b>.</li>
+        <li>Select the extracted folder.</li>
+        <li>The extension icon appears in the toolbar.</li>
+      </ol>
+      <hr>
+      <p>✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.</p>
     </td>
   </tr>
 </table>
+
 
 
 
