@@ -75,13 +75,13 @@ Both functionalities share the same storage, popup, and service worker. You can 
 4. **Drag** the `.crx` file onto the page.
 5. Confirm the prompt.
 6. The extension icon appears in the toolbar.
-⚠️ Chrome may block `.crx` files for non-Web-Store extensions. If that happens, use **Method 2**.
+   
+>⚠️ Chrome may block `.crx` files for non-Web-Store extensions. If that happens, use **Method 2**.
 
     </td>
   </tr>
-
-
 </table>
+
 
 
 <table>
