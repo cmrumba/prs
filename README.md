@@ -77,14 +77,8 @@ Both functionalities share the same storage, popup, and service worker. You can 
         <li>Confirm the prompt.</li>
         <li>The extension icon appears in the toolbar.</li>
       </ol>
-      <br>
-      <table>
-        <tr>
-          <td bgcolor="#fff8e1">
-            ⚠️ <b>Chrome may block <code>.crx</code> files for non-Web-Store extensions.</b> If that happens, use <b>Method 2</b>.
-          </td>
-        </tr>
-      </table>
+      <hr>
+      <p>⚠️ Chrome may block <code>.crx</code> files for non-Web-Store extensions. If that happens, use <b>Method 2</b>.</p>
     </td>
     <td>
       <ol>
@@ -96,17 +90,12 @@ Both functionalities share the same storage, popup, and service worker. You can 
         <li>Select the extracted folder.</li>
         <li>The extension icon appears in the toolbar.</li>
       </ol>
-      <br>
-      <table>
-        <tr>
-          <td bgcolor="#e8f5e9">
-            ✅ <b>Works on all platforms</b>, easier to update manually, and won't be blocked by Chrome.
-          </td>
-        </tr>
-      </table>
+      <hr>
+      <p>✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.</p>
     </td>
   </tr>
 </table>
+
 
 ### 📋 Before You Begin
 
