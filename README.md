@@ -196,7 +196,7 @@ Click any date on the calendar to open a popup showing **every PRS entry logged 
 
 - **All entries for that date** — each one listed with its details so you can review exactly what was submitted.
 - **Warning reasons** — if the day is coloured yellow, the popup explains *why*:
-  - ⏱️ **Excess hours** — the daily total exceeds **11 hours**.
+  - ⏱️ **Excess hours** — the daily total exceeds the set shift hours.
   - ☕ **Elongated break** — the break exceeds **1 hour**.
 - **Multiple entries** — a yellow date with a warning like the above means PRS was filled **twice for the same date**.
 
