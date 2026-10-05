@@ -1,5 +1,178 @@
 <div align="center">
 
+<img src="images/logo.png" alt="PRS Auto-fills logo" width="100" height="100" />
+
+# 🧩 Installing PRS Auto-fills on Google Chrome
+
+**Two ways to install — pick whichever suits you best.**
+
+<br />
+
+[![Chrome](https://img.shields.io/badge/Google_Chrome-Required-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Method 1](https://img.shields.io/badge/Method_1-.crx_Drag_%26_Drop-34A853?style=for-the-badge)](#-method-1--crx-drag--drop-quickest)
+[![Method 2](https://img.shields.io/badge/Method_2-.zip_+_Developer_Mode-f4d03f?style=for-the-badge)](#-method-2--zip--developer-mode-recommended)
+
+<br />
+
+[**Method 1 — .crx**](#-method-1--crx-drag--drop-quickest) · [**Method 2 — .zip**](#-method-2--zip--developer-mode-recommended) · [**Verify**](#-verify-the-installation) · [**Troubleshooting**](#-troubleshooting) · [**Updates**](#-updating-the-extension) · [**Uninstall**](#-uninstalling)
+
+</div>
+
+---
+
+## 📋 Before You Begin
+
+| Requirement | Details |
+|---|---|
+| **Browser** | Google Chrome (or any Chromium-based browser: Edge, Brave, Opera) |
+| **OS** | Windows, macOS, or Linux |
+| **Access** | The official GitHub repository for PRS Auto-fills |
+| **Network** | Ability to reach `pmp.digitaldividedata.com` |
+
+> ℹ️ **Which method should I use?**
+>
+> - **Method 1 (.crx)** — fastest. Just drag a file into Chrome. Best if you want a one-step install.
+> - **Method 2 (.zip)** — recommended. Uses Chrome's official "Load unpacked" flow, works on all platforms, and is easier to update manually.
+>
+> If Chrome blocks the `.crx` file (it often does for non-Web-Store extensions), fall back to **Method 2**.
+
+---
+
+## 🟢 Method 1 — `.crx` Drag & Drop *(quickest)*
+
+### Step 1 — Download the `.crx` file
+
+1. Go to the [**Releases**](../../releases) page of the GitHub repository.
+2. Under the latest release, find the asset named something like:
+
+   ```text
+   prs-auto-fills-v1.0.crx
+
+
+
+
+
+
+
+
+
+   
+<div align="center">
+
+<img src="images/logo.png" alt="PRS Auto-fills logo" width="120" height="120" />
+
+# PRS Auto-fills
+
+**A glossy, productivity-boosting Chrome/Edge extension for the PRS web app.**
+
+Remembers your Project/Task/Subtask picks · auto-fills your daily form · paints a live payroll calendar.
+
+<br />
+
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-34A853?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](#)
+[![Version](https://img.shields.io/badge/version-1.0-2b5d94?style=for-the-badge)](#)
+[![License](https://img.shields.io/badge/license-MIT-f4d03f?style=for-the-badge)](#-license)
+
+<br />
+
+[**Features**](#-features) · [**Installation**](#-installation) · [**How It Works**](#-how-it-works) · [**Architecture**](#-architecture) · [**Customization**](#-customization) · [**License**](#-license)
+
+</div>
+
+---
+
+## ✨ Features
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+
+### 🧠 Smart Field Memory
+
+Your **Project**, **Task**, and **Subtask** selections are saved automatically and restored the next time you open a create page. Never re-pick the same options again.
+
+- **Project** — restored from storage, or defaults to the first real project
+- **Task** — restored only if you've saved one
+- **Subtask** — restored only if you've saved one
+
+    </td>
+    <td width="50%" valign="top">
+
+### ⚡ Auto-fill on Load
+
+Four common fields are filled the instant the page loads — but only if they're empty, so your own edits are never overwritten.
+
+| Field | Value |
+|---|---|
+| `startTime` | `08:00` |
+| `endTime` | `17:00` |
+| `breaktime` | `01:00` |
+| `units_completed` | `480` |
+
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### 📅 Live Productivity Calendar
+
+A floating, draggable widget paints a color-coded calendar so you can see your month at a glance.
+
+| Color | Meaning |
+|---|---|
+| 🔴 Red | Weekday, no PRS entry |
+| 🟢 Green | PRS filled |
+| 🔵 Blue | Saturday worked (> 2h) |
+| 🟡 Yellow | Warning state |
+| ⚪ Gray | Weekend / older / upcoming |
+
+    </td>
+    <td width="50%" valign="top">
+
+### ⚠️ Warning States
+
+Two conditions trigger a **yellow** day cell and a popup warning:
+
+- **Elongated break** — break exceeds **1 hour**
+- **Excess hours** — daily hours exceed **11 hours**
+
+Sundays with entries are flagged as errors too.
+
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+
+### 💰 Payroll Summary
+
+Automatic **25th → 24th** pay-period math:
+
+- **Days present** — weekdays filled + qualifying Saturdays
+- **Daily rate** — `KES 25,000 ÷ weekdays in period`
+- **Payroll** — `daysPresent × dailyRate`
+
+Previous pay period hides during the 1st–24th window.
+
+    </td>
+    <td width="50%" valign="top">
+
+### 🔄 Background Sync
+
+The extension silently opens a hidden list-page tab, scrapes **every page** of your productivity table, aggregates rows by `(task, date)`, and syncs the calendar — no manual action required.
+
+    </td>
+  </tr>
+</table>
+
+---
+
+
+   
+
+<div align="center">
+
 # ⏰ WAVE Timer Reminder
 
 **A self-healing Chrome extension that reminds you to start, pause, and stop your WAVE timer — based on your shift and break schedule.**
