@@ -105,8 +105,8 @@ Both functionalities share the same storage, popup, and service worker. You can 
 
 | Requirement | Details |
 |---|---|
-| **Browser** | Google Chrome (or any Chromium-based browser: Edge, Brave, Opera) |
-| **OS** | Windows, macOS, or Linux |
+| **Browser** | Google Chrome |
+| **OS** | Windows |
 | **Access** | The official GitHub repository for Productivity Assistant |
 | **Network** | Ability to reach `pmp.digitaldividedata.com` and `56.228.51.27:8080` |
 
