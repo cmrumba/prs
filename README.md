@@ -186,7 +186,23 @@ The widget also shows an **estimated payout** for the current month, computed fr
 > The PRS widget is still **under active development**. If you notice any discrepancy in the calculations, please **notify the developer** so it can be corrected.
 
 <hr>
+## 🗓️ Day Popup
 
+<img src="images/hours.png" alt="Productivity Assistant logo" width="356" height="475" />
+
+Click any date on the calendar to open a popup showing **every PRS entry logged for that day** — no need to open the list page or search manually.
+
+### What You'll See
+
+- **All entries for that date** — each one listed with its details so you can review exactly what was submitted.
+- **Warning reasons** — if the day is coloured yellow, the popup explains *why*:
+  - ⏱️ **Excess hours** — the daily total exceeds **11 hours**.
+  - ☕ **Elongated break** — the break exceeds **1 hour**.
+- **Multiple entries** — a yellow date with a warning like the above means PRS was filled **twice for the same date**.
+
+> 💡 A yellow day isn't just a colour — it's a signal. Open it to see which condition triggered the warning and correct the entry if needed.
+
+<hr>
 
 
 
