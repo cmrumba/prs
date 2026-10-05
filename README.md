@@ -6,7 +6,7 @@
 
 **Productivity-boosting Chrome extension for PRS and WAVE.**
 
-Remembers your form selections · auto-fills your daily productivity entries · paints a live payroll calendar · reminds you to start, pause, and stop your WAVE timer and Fill your PRS entries.
+Remembers your form selections · auto-fills your daily productivity entries · paints a live payroll calendar · reminds you to start, pause, and stop your WAVE timer· reminds you to Fill your PRS entries.
 
 <br />
 
@@ -26,7 +26,7 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 
 ## 📖 Overview
 
-**Productivity Assistant** is a single Chrome/Edge extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
+**Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
 
 <table>
   <tr>
@@ -51,7 +51,6 @@ Watches the WAVE fill-productivity page and reminds you to start / pause / stop 
 - Tracks one boolean: **`workingStatus`**
 - Fires notifications based on your **shift & break schedule**
 - Auto-fills the WAVE dropdowns
-- Self-healing across browser restarts
 
     </td>
   </tr>
@@ -71,7 +70,7 @@ Both functionalities share the same storage, popup, and service worker. You can 
   <tr valign="top">
     <td>
 
-1. Download the `.crx` file from the [**Releases**](../../releases) page.
+1. Download the `.crx` file from the [**Releases**](../../) page.
 2. Open `chrome://extensions`.
 3. Enable **Developer mode** (top-right toggle).
 4. **Drag** the `.crx` file onto the page.
@@ -83,7 +82,7 @@ Both functionalities share the same storage, popup, and service worker. You can 
     </td>
     <td>
 
-1. Download the `.zip` from the [**Releases**](../../releases) page.
+1. Download the `.zip` from the [**Releases**](../../) page.
 2. Extract it to a permanent folder.
 3. Open `chrome://extensions`.
 4. Enable **Developer mode** (top-right toggle).
