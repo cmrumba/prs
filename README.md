@@ -28,6 +28,84 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 
 **Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
 <hr>
+
+## 🚀 Installation
+
+<table>
+  <tr>
+    <th width="50%">Method 1 — `.crx` Drag & Drop <em>(quickest)</em></th>
+    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <ol>
+        <li>Download the <code>.crx</code> file from the <a href="../../"><b>Releases</b></a> page.</li>
+        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
+        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
+        <li><b>Drag</b> the <code>.crx</code> file onto the page.</li>
+        <li>Confirm the prompt.</li>
+        <li>The extension icon appears in the toolbar.</li>
+      </ol>
+      <hr>
+      <p>⚠️ Chrome may block <code>.crx</code> files for non-Web-Store extensions. If that happens, use <b>Method 2</b>.</p>
+    </td>
+    <td>
+      <ol>
+        <li>Download the <code>.zip</code> from the <a href="../../"><b>Releases</b></a> page.</li>
+        <li>Extract it to a permanent folder.</li>
+        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
+        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
+        <li>Click <b>Load unpacked</b>.</li>
+        <li>Select the extracted folder.</li>
+        <li>The extension icon appears in the toolbar.</li>
+      </ol>
+      <hr>
+      <p>✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.</p>
+    </td>
+  </tr>
+</table>
+
+
+### 📋 Before You Begin
+
+| Requirement | Details |
+|---|---|
+| **Browser** | Google Chrome |
+| **OS** | Windows |
+| **Access** | The official GitHub repository for Productivity Assistant |
+| **Network** | Ability to reach PRS and WAVE sites |
+
+### ✅ Verify the Installation
+
+- The extension icon appears in the toolbar.
+- Click it → the popup opens with the **Current Selections**, **Shift**, and **Breaks** panels.
+- Open PRS / WAVE → the content scripts run and the auto-fill kicks in.
+
+### 🩺 Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| Extension doesn't appear | Make sure **Developer mode** is on and you loaded the right folder |
+| `.crx` blocked by Chrome | Use **Method 2 (.zip + Load unpacked)** instead |
+| Popup blank | Reload the extension, then reopen the popup |
+| No notifications | Check Windows → Settings → System → Notifications → Google Chrome is allowed and Do Not Disturb is off |
+| WAVE auto-fill not working | Reload the WAVE page once after install |
+
+### 🔄 Updating the Extension
+
+- **Method 1** — download the new `.crx` and drag it onto `chrome://extensions` again
+- **Method 2** — replace the contents of the loaded folder, then click the **Reload** icon on the extension card
+
+### 🗑️ Uninstalling
+
+1. Open `chrome://extensions`
+2. Find **Productivity Assistant**
+3. Click **Remove**
+
+<hr>
+
+
+
 ## The extension's popup functionality
 <img src="images/popup.png" alt="Productivity Assistant logo" width="410" height="832" />
 ## 🚀 Quick Actions
@@ -152,78 +230,6 @@ Both functionalities share the same storage, popup, and service worker. You can 
 
 ---
 
-## 🚀 Installation
-
-<table>
-  <tr>
-    <th width="50%">Method 1 — `.crx` Drag & Drop <em>(quickest)</em></th>
-    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
-  </tr>
-  <tr valign="top">
-    <td>
-      <ol>
-        <li>Download the <code>.crx</code> file from the <a href="../../"><b>Releases</b></a> page.</li>
-        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
-        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
-        <li><b>Drag</b> the <code>.crx</code> file onto the page.</li>
-        <li>Confirm the prompt.</li>
-        <li>The extension icon appears in the toolbar.</li>
-      </ol>
-      <hr>
-      <p>⚠️ Chrome may block <code>.crx</code> files for non-Web-Store extensions. If that happens, use <b>Method 2</b>.</p>
-    </td>
-    <td>
-      <ol>
-        <li>Download the <code>.zip</code> from the <a href="../../"><b>Releases</b></a> page.</li>
-        <li>Extract it to a permanent folder.</li>
-        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
-        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
-        <li>Click <b>Load unpacked</b>.</li>
-        <li>Select the extracted folder.</li>
-        <li>The extension icon appears in the toolbar.</li>
-      </ol>
-      <hr>
-      <p>✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.</p>
-    </td>
-  </tr>
-</table>
-
-
-### 📋 Before You Begin
-
-| Requirement | Details |
-|---|---|
-| **Browser** | Google Chrome |
-| **OS** | Windows |
-| **Access** | The official GitHub repository for Productivity Assistant |
-| **Network** | Ability to reach `pmp.digitaldividedata.com` and `56.228.51.27:8080` |
-
-### ✅ Verify the Installation
-
-- The extension icon appears in the toolbar.
-- Click it → the popup opens with the **Current Selections**, **Shift**, and **Breaks** panels.
-- Open PRS / WAVE → the content scripts run and the auto-fill kicks in.
-
-### 🩺 Troubleshooting
-
-| Problem | Fix |
-|---|---|
-| Extension doesn't appear | Make sure **Developer mode** is on and you loaded the right folder |
-| `.crx` blocked by Chrome | Use **Method 2 (.zip + Load unpacked)** instead |
-| Popup blank | Reload the extension, then reopen the popup |
-| No notifications | Check Windows → Settings → System → Notifications → Google Chrome is allowed and Do Not Disturb is off |
-| WAVE auto-fill not working | Reload the WAVE page once after install |
-
-### 🔄 Updating the Extension
-
-- **Method 1** — download the new `.crx` and drag it onto `chrome://extensions` again
-- **Method 2** — replace the contents of the loaded folder, then click the **Reload** icon on the extension card
-
-### 🗑️ Uninstalling
-
-1. Open `chrome://extensions`
-2. Find **Productivity Assistant**
-3. Click **Remove**
 
 
 
