@@ -76,8 +76,11 @@ Both functionalities share the same storage, popup, and service worker. You can 
 4. **Drag** the `.crx` file onto the page.
 5. Confirm the prompt.
 6. The extension icon appears in the toolbar.
-   
-> ⚠️ Chrome may block `.crx` files for non-Web-Store extensions. If that happens, use **Method 2**.
+
+<details open>
+<summary>⚠️ <b>Chrome may block .crx files for non-Web-Store extensions.</b></summary>
+If that happens, use <b>Method 2</b>.
+</details>
 
     </td>
     <td>
@@ -89,12 +92,16 @@ Both functionalities share the same storage, popup, and service worker. You can 
 5. Click **Load unpacked**.
 6. Select the extracted folder.
 7. The extension icon appears in the toolbar.
-   
-> ✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.
+
+<details open>
+<summary>✅ <b>Platform Compatibility</b></summary>
+Works on all platforms, easier to update manually, and won't be blocked by Chrome.
+</details>
 
     </td>
   </tr>
 </table>
+
 
 
 
