@@ -133,6 +133,10 @@ Both functionalities share the same storage, popup, and service worker. You can 
 2. Find **Productivity Assistant**
 3. Click **Remove**
 
+
+
+
+
 ---
 ## ✨ Features
 
@@ -141,80 +145,96 @@ Both functionalities share the same storage, popup, and service worker. You can 
 <table>
   <tr>
     <td width="50%" valign="top">
-
-#### Smart Field Memory
-
-Your **Project**, **Task**, and **Subtask** selections are saved automatically and restored the next time you open a create page. Never re-pick the same options again.
-
-- **Project** — restored from storage, or defaults to the first real project
-- **Task** — restored only if you've saved one
-- **Subtask** — restored only if you've saved one
-
+      <h4>Smart Field Memory</h4>
+      <p>Your <b>Project</b>, <b>Task</b>, and <b>Subtask</b> selections are saved automatically and restored the next time you open a create page. Never re-pick the same options again.</p>
+      <ul>
+        <li><b>Project</b> — restored from storage, or defaults to the first real project</li>
+        <li><b>Task</b> — restored only if you've saved one</li>
+        <li><b>Subtask</b> — restored only if you've saved one</li>
+      </ul>
     </td>
     <td width="50%" valign="top">
-
-#### Auto-fill on Load
-
-Four common fields are filled the instant the page loads — but only if they're empty, so your own edits are never overwritten.
-
-| Field | Value |
-|---|---|
-| `startTime` | `08:00` |
-| `endTime` | `17:00` |
-| `breaktime` | `01:00` |
-| `units_completed` | `480` |
-
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-
-#### 📅 Live Productivity Calendar
-
-A floating, draggable widget paints a color-coded calendar so you can see your month at a glance.
-
-| Color | Meaning |
-|---|---|
-| 🔴 Red | Weekday, no PRS entry |
-| 🟢 Green | PRS filled |
-| 🔵 Blue | Saturday worked (> 2h) |
-| 🟡 Yellow | Warning state |
-| ⚪ Gray | Weekend / older / upcoming |
-
-    </td>
-    <td width="50%" valign="top">
-
-#### ⚠️ Warning States
-
-Two conditions trigger a **yellow** day cell and a popup warning:
-
-- **Elongated break** — break exceeds **1 hour**
-- **Excess hours** — daily hours exceed **11 hours**
-
-Sundays with entries are flagged as errors too.
-
+      <h4>Auto-fill on Load</h4>
+      <p>Four common fields are filled the instant the page loads — but only if they're empty, so your own edits are never overwritten.</p>
+      <table width="100%">
+        <tr>
+          <th>Field</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td><code>startTime</code></td>
+          <td><code>08:00</code></td>
+        </tr>
+        <tr>
+          <td><code>endTime</code></td>
+          <td><code>17:00</code></td>
+        </tr>
+        <tr>
+          <td><code>breaktime</code></td>
+          <td><code>01:00</code></td>
+        </tr>
+        <tr>
+          <td><code>units_completed</code></td>
+          <td><code>480</code></td>
+        </tr>
+      </table>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-
-#### 💰 Payroll Summary
-
-Automatic **25th → 24th** pay-period math:
-
-- **Days present** — weekdays filled + qualifying Saturdays
-- **Daily rate** — `KES 25,000 ÷ weekdays in period`
-- **Payroll** — `daysPresent × dailyRate`
-
-Previous pay period hides during the 1st–24th window.
-
+      <h4>📅 Live Productivity Calendar</h4>
+      <p>A floating, draggable widget paints a color-coded calendar so you can see your month at a glance.</p>
+      <table width="100%">
+        <tr>
+          <th>Color</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td>🔴 Red</td>
+          <td>Weekday, no PRS entry</td>
+        </tr>
+        <tr>
+          <td>🟢 Green</td>
+          <td>PRS filled</td>
+        </tr>
+        <tr>
+          <td>🔵 Blue</td>
+          <td>Saturday worked (&gt; 2h)</td>
+        </tr>
+        <tr>
+          <td>🟡 Yellow</td>
+          <td>Warning state</td>
+        </tr>
+        <tr>
+          <td>⚪ Gray</td>
+          <td>Weekend / older / upcoming</td>
+        </tr>
+      </table>
     </td>
     <td width="50%" valign="top">
-
-#### 🔄 Background Sync
-
-The extension silently opens a hidden list-page tab, scrapes **every page** of your productivity table, aggregates rows by `(task, date)`, and syncs the calendar — no manual action required.
-
+      <h4>⚠️ Warning States</h4>
+      <p>Two conditions trigger a <b>yellow</b> day cell and a popup warning:</p>
+      <ul>
+        <li><b>Elongated break</b> — break exceeds <b>1 hour</b></li>
+        <li><b>Excess hours</b> — daily hours exceed <b>11 hours</b></li>
+      </ul>
+      <p>Sundays with entries are flagged as errors too.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>💰 Payroll Summary</h4>
+      <p>Automatic <b>25th &rarr; 24th</b> pay-period math:</p>
+      <ul>
+        <li><b>Days present</b> — weekdays filled + qualifying Saturdays</li>
+        <li><b>Daily rate</b> — <code>KES 25,000 &divide; weekdays in period</code></li>
+        <li><b>Payroll</b> — <code>daysPresent &times; dailyRate</code></li>
+      </ul>
+      <p>Previous pay period hides during the 1st–24th window.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🔄 Background Sync</h4>
+      <p>The extension silently opens a hidden list-page tab, scrapes <b>every page</b> of your productivity table, aggregates rows by <code>(task, date)</code>, and syncs the calendar — no manual action required.</p>
     </td>
   </tr>
 </table>
