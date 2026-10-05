@@ -286,7 +286,7 @@ The content script observes two buttons on the WAVE page:
 
 #### 🔔 Notifications
 
-All notifications are **Windows-native Chrome notifications** with two buttons: **✔ Dismiss** and **🚀 Open WAVE**. They are `silent: true` and `priority: 0`, so they don't show on the lock screen.
+All notifications are **Windows-native Chrome notifications** with two buttons: **✔ Dismiss** and **🚀 Open WAVE**.
 
 | Notification | When it fires | Condition |
 |---|---|---|
