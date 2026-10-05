@@ -510,32 +510,6 @@ The popup is **shared by both functionalities** and shows:
   </tr>
 </table>
 
----
-
-## 🗄️ Storage Keys
-
-| Key | Site | Purpose |
-|---|---|---|
-| `savedProjectId` / `savedTaskId` / `savedSubtaskId` | PRS | Persisted dropdown selections |
-| `prsCalendar` | PRS | Scraped calendar data |
-| `workingStatus` | WAVE | Single source of truth for timer state |
-| `assignedProject*` / `assignedTask*` / `assignedSubtask*` | WAVE | Live WAVE form selections |
-| `shiftStart`, `shiftStop`, `firstBreak*`, `secondBreak*` | WAVE | Schedule config |
-| `scheduleState` | WAVE | Once-per-day notification fired flags |
-| `currentNotificationId` | WAVE | Currently displayed notification ID |
-| `lastPleaseStartAlert` / `lastPostShiftAlert` | WAVE | Reminder cooldown timestamps |
-
----
-
-## 🛡️ Reliability Mechanisms (WAVE)
-
-1. 🔁 **Top-level boot IIFE** — runs on every service-worker boot (install, update, reload, browser start, first wake-up)
-2. ⏱️ **`timerWatch` every minute** — the reliable heartbeat
-3. 📥 **Storage change listener** — re-evaluates on every `workingStatus` change
-4. 💤 **`chrome.idle`** — re-evaluates on screen unlock
-5. 🩹 **Self-healing alarms** — recreated on every tick
-6. 🔒 **Pure reads in `checkStatus`** — no side effects, no races
-7. 🧹 **Prefix-scoped notification clearing** — only the extension's own notifications are cleared
 
 ---
 
@@ -604,6 +578,34 @@ Contributions are welcome!
 5. Open a Pull Request
 
 ---
+---
+
+## 🗄️ Storage Keys
+
+| Key | Site | Purpose |
+|---|---|---|
+| `savedProjectId` / `savedTaskId` / `savedSubtaskId` | PRS | Persisted dropdown selections |
+| `prsCalendar` | PRS | Scraped calendar data |
+| `workingStatus` | WAVE | Single source of truth for timer state |
+| `assignedProject*` / `assignedTask*` / `assignedSubtask*` | WAVE | Live WAVE form selections |
+| `shiftStart`, `shiftStop`, `firstBreak*`, `secondBreak*` | WAVE | Schedule config |
+| `scheduleState` | WAVE | Once-per-day notification fired flags |
+| `currentNotificationId` | WAVE | Currently displayed notification ID |
+| `lastPleaseStartAlert` / `lastPostShiftAlert` | WAVE | Reminder cooldown timestamps |
+
+---
+
+## 🛡️ Reliability Mechanisms (WAVE)
+
+1. 🔁 **Top-level boot IIFE** — runs on every service-worker boot (install, update, reload, browser start, first wake-up)
+2. ⏱️ **`timerWatch` every minute** — the reliable heartbeat
+3. 📥 **Storage change listener** — re-evaluates on every `workingStatus` change
+4. 💤 **`chrome.idle`** — re-evaluates on screen unlock
+5. 🩹 **Self-healing alarms** — recreated on every tick
+6. 🔒 **Pure reads in `checkStatus`** — no side effects, no races
+7. 🧹 **Prefix-scoped notification clearing** — only the extension's own notifications are cleared
+
+
 
 ## 📄 License
 
