@@ -28,6 +28,52 @@ Remembers your form selections · auto-fills your daily productivity entries · 
 
 **Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
 
+<img src="images/popup.png" alt="Productivity Assistant logo" width="120" height="120" />
+## 🚀 Quick Actions
+
+- **🚀 Launch WAVE** — opens the WAVE site in a single click.
+- **📂 Open PRS Site** — opens the PRS webpage in a single click.
+
+> No more manually copy-pasting URLs or digging through your bookmarks — both sites are always one click away.
+
+---
+
+## 🟢 Working Status Indicator
+
+The chip above the timer shows whether or not you are currently logging time:
+
+- 🟢 **"Working"** — the WAVE timer is **on**.
+- ⚪ **"Not Working"** — the WAVE timer is **off**.
+
+---
+
+## 📋 Current WAVE Selections
+
+The **Current Selections** panel displays your **Project**, **Task**, and **Subtask** exactly as they are saved in Chrome storage. This mirrors what the content script has captured from the WAVE page, so you always know what you're currently working on.
+
+---
+
+## ⏰ Shift & Break Times
+
+You can adjust the time fields to receive notifications at the right moments for **your** shift.
+
+> ⚠️ The extension ships with **default values for a night shift**. If your schedule differs, change these fields the first time you install the extension.
+
+| Field | Default |
+|---|---|
+| 🕗 **Shift Start** | `8:00 PM` |
+| 🕔 **Shift Stop** | `5:00 AM` |
+| ☕ **First Break Start** | `11:30 PM` |
+| ☕ **First Break Stop** | `12:00 PM` |
+| ☕ **Second Break Start** | `2:00 AM` |
+| ☕ **Second Break Stop** | `2:30 AM` |
+
+> 📌 Remember to update these fields on first install so the reminders fire at the correct times.
+
+
+
+
+
 <table>
   <tr>
     <th width="50%">🧠 PRS Auto-fills</th>
