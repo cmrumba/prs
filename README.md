@@ -19,46 +19,17 @@ A Chrome Manifest V3 extension that improves productivity tracking and time mana
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation from `.zip`
 
-Choose the installation method that matches the package you received.
-
-### Option 1: Install from `.crx`
-
-If you received a `.crx` extension package:
-
-1. Open Chrome.
-2. Navigate to:
-
-   `chrome://extensions`
-
-3. Enable **Developer mode** using the toggle in the top-right corner.
-4. Drag and drop the `.crx` file onto the Extensions page.
-5. Confirm the installation if Chrome displays a security prompt.
-6. Make sure **Productivity Assistant** appears in the extensions list.
-7. Pin the extension to the Chrome toolbar for easy access.
-
-### Option 2: Install from `.zip`
-
-If you received the source code as a ZIP file:
-
-1. Extract the ZIP file to a permanent folder.
-2. Open Chrome and navigate to:
-
-   `chrome://extensions`
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the extracted Productivity Assistant folder.
-6. Confirm that the extension appears in the extensions list.
-7. Pin the extension to the toolbar.
 
 <ol>
-        <li>Download the <code>.zip</code> from the <a href="../../releases/edit/v1.0.0"><b>Releases</b></a> page.</li>
-        <li>Extract it to a permanent folder.<code>e.g (~/Documents folder)</code></li>
+        <li>Download the <code>prs-wave.zip</code> file from the <a href="../../releases/download/v1.0.0/prs-wave.zip"><b>Releases</b></a> page.</li>
+   <li> Go to your "Downloads" folder and copy the prs-wave.zip file to "Documents" folder.
+        <li>Extract <code>"prs-wave.zip"</code> file in the <code>"Documents"</code> folder</li>
         <li>Open <code>chrome://extensions</code> (or Click Chrome Settings -> Extensions).</li>
-        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
-        <li>Click <b>Load unpacked</b>.</li>
-        <li>Select the extracted folder.</li>
+        <li>Enable **Developer mode** (top-right toggle).</li>
+        <li>Click **Load unpacked** button.</li>
+        <li>Select the extracted <code>"prs-wave"</code> folder.</li>
         <li>The extension icon appears in the toolbar.</li>
       </ol>
       <hr>
