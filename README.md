@@ -13,7 +13,6 @@
 <br />
 
 </div>
-### Productivity Assistant
 
 A Chrome extension that improves productivity tracking and time management across **Work Analytics Value Evaluation Tool (WAVE)** and **DDD Productivity Report System (PRS)**.
 
@@ -95,9 +94,7 @@ Open WAVE and verify that:
 To get the latest version with important patches:
 1. Download and extract the latest version from <a href="../../releases/download/v1.0.0/prs-wave.zip"><b>Releases</b></a> page.
 2. Replace the contents of the existing extension folder.
-3. Open:
-
-   `chrome://extensions`
+3. Open:  `chrome://extensions`
 
 4. Locate **Productivity Assistant**.
 5. Click **Reload**.
@@ -230,6 +227,12 @@ The estimated payroll is calculated as:
 The previous pay period is hidden during the **1st–24th** of the month where applicable.
 
 > **Note:** Payroll calculations are estimates and should not be treated as official payroll records.
+>> - 📉 It may be **lower** if you don't meet the metrics set for your project.
+>> - 📈 It may be **higher** if you exceed the target.
+
+### 🚧 Work in Progress
+
+> The PRS widget is still **under active development**. If you notice any discrepancy in the calculations, please **notify the developer** so it can be corrected.
 
 ---
 
@@ -255,13 +258,6 @@ The `workingStatus` value represents whether the user is currently working.
 |---|---|
 | `true` | Working / WAVE timer running |
 | `false` | Not working |
-
-State changes are logged with:
-
-- Previous value
-- New value
-- Reason
-- Timestamp
 
 ---
 
@@ -334,31 +330,31 @@ The configured schedule controls WAVE reminders and status checks.
 
 Productivity Assistant uses Chrome's native notification system to remind users about important schedule events.
 
-### Shift Started
+### 🟢Shift Started
 
 Triggered at the configured shift start time when WAVE is not running.
 
-### Break Time
+### ☕Break Time
 
 Triggered when a scheduled break begins.
 
-### Break Ended
+### ⏱️Break Ended
 
 Triggered when a scheduled break ends.
 
-### Shift Ended
+### 🌇Shift Ended
 
 Triggered at the configured shift end time when WAVE is still running.
 
-### Start WAVE Reminder
+### 🔴Start WAVE Timer Reminder
 
 If the shift is active and WAVE has not been started, the extension periodically reminds the user to start the timer.
 
-### Post-Shift Reminder
+### 🔁Post-Shift Reminder
 
 If WAVE remains active after the scheduled shift ends, the extension periodically reminds the user that the shift has ended.
 
-### Protected Stop Notification
+### ⚠️Protected Stop Notification
 
 When stopping WAVE is restricted during a protected period, the extension can display:
 
@@ -559,22 +555,26 @@ The extension uses Chrome local storage for configuration and runtime state.
 
 ## PRS Productivity Calendar
 
+It is automatically embeded on the on the webpage when you log into the PRS site.
 ![PRS Productivity Calendar](images/prs.png)
 
 ## Daily Hours & Productivity Details
 
+Click a date to reveal a popup showing your PRS hours and Break.
 ![Daily Hours](images/hours.png)
 
 ## Extension Popup
 
+Click the extension's icon to reveal this popup.
 ![Productivity Assistant Popup](images/popup.png)
 
-## Shift Schedule
-
+## Shift Notification
+`You will get this notification if you fail to start your timer during your working hours`
 ![Shift Schedule](images/shift.png)
 
-## Break Schedule
+## Break Schedule Notification
 
+`You will get this notification during break time`
 ![Break Schedule](images/break.png)
 
 ---
@@ -594,7 +594,7 @@ The extension uses Chrome local storage for configuration and runtime state.
 | Payroll estimate | ✓ | — |
 | Shift scheduling | ✓ | ✓ |
 | Break scheduling | ✓ | ✓ |
-| Native notifications | — | ✓ |
+| Native notifications | ✓ | ✓ |
 | Popup controls | ✓ | ✓ |
 
 ---
@@ -657,7 +657,7 @@ After updating:
 5. Confirm the schedule and saved selections.
 
 ---
-
+> If you are unable to install or troubleshoot, please contact the developer.
 # 🗑️ Uninstalling
 
 To remove Productivity Assistant:
