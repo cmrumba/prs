@@ -556,25 +556,30 @@ The extension uses Chrome local storage for configuration and runtime state.
 ## PRS Productivity Calendar
 
 `It is automatically embeded on the on the webpage when you log into the PRS site.`
+<hr>
 ![PRS Productivity Calendar](images/prs.png)
 
 ## Daily Hours & Productivity Details
 
 `Click a date to reveal a popup showing your PRS hours and Break.`
+<hr>
 ![Daily Hours](images/hours.png)
 
 ## Extension Popup
 
 `Click the extension's icon to reveal this popup.`
+<hr>
 ![Productivity Assistant Popup](images/popup.png)
 
 ## Shift Notification
 `You will get this notification if you fail to start your timer during your working hours`
+<hr>
 ![Shift Schedule](images/shift.png)
 
 ## Break Schedule Notification
 
 `You will get this notification during break time`
+<hr>
 ![Break Schedule](images/break.png)
 
 ---
