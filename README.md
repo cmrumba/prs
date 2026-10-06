@@ -1,10 +1,21 @@
 <div align="center">
 
 <img src="images/logo128.png" alt="Productivity Assistant logo" width="120" height="120" />
+
+<br />
+
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-34A853?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](#)
+[![Version](https://img.shields.io/badge/version-1.0-2b5d94?style=for-the-badge)](#)
+[![License](https://img.shields.io/badge/license-MIT-f4d03f?style=for-the-badge)](#-license)
+
+<br />
+
 </div>
 # Productivity Assistant
 
-A Chrome Manifest V3 extension that improves productivity tracking and time management across **PRS Productivity Assistant** and **WAVE Timer Reminder**.
+A Chrome Manifest V3 extension that improves productivity tracking and time management across **PRS Productivity Assistant** and **WAVE Tool**.
 
 ---
 
@@ -40,6 +51,17 @@ If you received the source code as a ZIP file:
 5. Select the extracted Productivity Assistant folder.
 6. Confirm that the extension appears in the extensions list.
 7. Pin the extension to the toolbar.
+
+<ol>
+        <li>Download the <code>.zip</code> from the <a href="../../releases/edit/v1.0.0"><b>Releases</b></a> page.</li>
+        <li>Extract it to a permanent folder.<code>e.g (~/Documents folder)</code></li>
+        <li>Open <code>chrome://extensions</code> (or Click Chrome Settings -> Extensions).</li>
+        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
+        <li>Click <b>Load unpacked</b>.</li>
+        <li>Select the extracted folder.</li>
+        <li>The extension icon appears in the toolbar.</li>
+      </ol>
+      <hr>
 
 > **Important:** Do not delete or move the extension folder after loading it unpacked. Chrome loads the extension directly from that folder.
 
