@@ -555,17 +555,17 @@ The extension uses Chrome local storage for configuration and runtime state.
 
 ## PRS Productivity Calendar
 
-It is automatically embeded on the on the webpage when you log into the PRS site.
+`It is automatically embeded on the on the webpage when you log into the PRS site.`
 ![PRS Productivity Calendar](images/prs.png)
 
 ## Daily Hours & Productivity Details
 
-Click a date to reveal a popup showing your PRS hours and Break.
+`Click a date to reveal a popup showing your PRS hours and Break.`
 ![Daily Hours](images/hours.png)
 
 ## Extension Popup
 
-Click the extension's icon to reveal this popup.
+`Click the extension's icon to reveal this popup.`
 ![Productivity Assistant Popup](images/popup.png)
 
 ## Shift Notification
@@ -657,7 +657,7 @@ After updating:
 5. Confirm the schedule and saved selections.
 
 ---
-> If you are unable to install or troubleshoot, please contact the developer.
+> `If you are unable to install or troubleshoot, please contact the developer.`
 # 🗑️ Uninstalling
 
 To remove Productivity Assistant:
