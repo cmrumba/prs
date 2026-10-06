@@ -24,13 +24,24 @@ A Chrome extension that improves productivity tracking and time management acros
 <ol>
         <li>Download the <code>prs-wave.zip</code> file from the <a href="../../releases/download/v1.0.0/prs-wave.zip"><b>Releases</b></a> page.</li>
    <li> Go to your "Downloads" folder and copy the prs-wave.zip file to "Documents" folder.
+   <img src="images/zip.png" alt="" width="120" height="120" />
+          
         <li>Extract <code>"prs-wave.zip"</code> file in the <code>"Documents"</code> folder</li>
+        <img src="images/unzip.png" alt="" width="120" height="120" />
         <li>Open <code>chrome://extensions</code> (or Click Chrome Settings -> Extensions).</li>
         <li>Enable <code>Developer mode</code> (top-right toggle).</li>
+         <img src="images/developer.png" alt="" width="120" height="120" />
         <li>Click <code>Load unpacked</code> button.</li>
+         <img src="images/unpacked.png" alt="" width="120" height="120" />
         <li>Select the extracted <code>"prs-wave"</code> folder.</li>
         <li>The extension icon appears in the toolbar.</li>
+         <img src="images/loaded.png" alt="" width="120" height="120" />
       </ol>
+      
+          
+          
+           
+           
       <hr>
 
 > **Important:** Do not delete or move the extension folder after loading it unpacked. Chrome loads the extension directly from that folder.
