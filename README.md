@@ -13,9 +13,9 @@
 <br />
 
 </div>
-# Productivity Assistant
+### Productivity Assistant
 
-A Chrome Manifest V3 extension that improves productivity tracking and time management across **PRS Productivity Assistant** and **WAVE Tool**.
+A Chrome extension that improves productivity tracking and time management across **Work Analytics Value Evaluation Tool (WAVE)** and **DDD Productivity Report System (PRS)**.
 
 ---
 
@@ -27,8 +27,8 @@ A Chrome Manifest V3 extension that improves productivity tracking and time mana
    <li> Go to your "Downloads" folder and copy the prs-wave.zip file to "Documents" folder.
         <li>Extract <code>"prs-wave.zip"</code> file in the <code>"Documents"</code> folder</li>
         <li>Open <code>chrome://extensions</code> (or Click Chrome Settings -> Extensions).</li>
-        <li>Enable **Developer mode** (top-right toggle).</li>
-        <li>Click **Load unpacked** button.</li>
+        <li>Enable <code>Developer mode</code> (top-right toggle).</li>
+        <li>Click <code>Load unpacked</code> button.</li>
         <li>Select the extracted <code>"prs-wave"</code> folder.</li>
         <li>The extension icon appears in the toolbar.</li>
       </ol>
@@ -91,23 +91,9 @@ Open WAVE and verify that:
 
 ---
 
-## 🔄 Updating
-
-### Updating a `.crx` Installation
-
-If you receive a newer `.crx` version:
-
-1. Open `chrome://extensions`.
-2. Enable **Developer mode**.
-3. Remove the previous version if Chrome does not allow the new package to replace it.
-4. Drag the new `.crx` file onto the Extensions page.
-5. Confirm that the new version is installed and enabled.
-
-### Updating a "Load unpacked" Installation
-
-If you installed the extension from source:
-
-1. Download or extract the latest version.
+## 🔄 Updating a "Load unpacked" Installation
+To get the latest version with important patches:
+1. Download and extract the latest version from <a href="../../releases/download/v1.0.0/prs-wave.zip"><b>Releases</b></a> page.
 2. Replace the contents of the existing extension folder.
 3. Open:
 
