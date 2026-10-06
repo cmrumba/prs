@@ -1,626 +1,739 @@
-<div align="center">
+# Productivity Assistant
 
-<img src="images/logo128.png" alt="Productivity Assistant logo" width="120" height="120" />
-
-# 🧩 Productivity Assistant
-
-**Productivity-boosting Chrome extension for PRS and WAVE.**
-
-Remembers your form selections · auto-fills your daily productivity entries · paints a live payroll calendar · reminds you to start, pause, and stop your WAVE timer· reminds you to Fill your PRS entries.
-
-<br />
-
-[![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Chrome](https://img.shields.io/badge/Chrome-Compatible-34A853?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Edge](https://img.shields.io/badge/Edge-Compatible-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](#)
-[![Version](https://img.shields.io/badge/version-1.0-2b5d94?style=for-the-badge)](#)
-[![License](https://img.shields.io/badge/license-MIT-f4d03f?style=for-the-badge)](#-license)
-
-<br />
-
-[**Features**](#-features) · [**Installation**](#-installation) · [**How It Works**](#-how-it-works) · [**Architecture**](#-architecture) · [**Roadmap**](#-roadmap) · [**Contributing**](#-contributing) · [**License**](#-license)
-
-</div>
+A Chrome Manifest V3 extension that improves productivity tracking and time management across **PRS Productivity Assistant** and **WAVE Timer Reminder**.
 
 ---
-
-## 📖 Overview
-
-**Productivity Assistant** is a single Chrome extension that bundles **two independent functionalities** for the PRS and WAVE web apps:
-<hr>
 
 ## 🚀 Installation
 
-<table>
-  <tr>
-    <th width="50%">Method 1 — `.crx` Drag & Drop <em>(quickest)</em></th>
-    <th width="50%">Method 2 — `.zip` + Developer Mode <em>(recommended)</em></th>
-  </tr>
-  <tr valign="top">
-    <td>
-      <ol>
-        <li>Download the <code>.crx</code> file from the <a href="../../"><b>Releases</b></a> page.</li>
-        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
-        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
-        <li><b>Drag</b> the <code>.crx</code> file onto the page.</li>
-        <li>Confirm the prompt.</li>
-        <li>The extension icon appears in the toolbar.</li>
-      </ol>
-      <hr>
-      <p>⚠️ Chrome may block <code>.crx</code> files for non-Web-Store extensions. If that happens, use <b>Method 2</b>.</p>
-    </td>
-    <td>
-      <ol>
-        <li>Download the <code>.zip</code> from the <a href="../../"><b>Releases</b></a> page.</li>
-        <li>Extract it to a permanent folder.</li>
-        <li>Open <code>chrome://extensions</code> (or Click Settings -> then click Extensions).</li>
-        <li>Enable <b>Developer mode</b> (top-right toggle).</li>
-        <li>Click <b>Load unpacked</b>.</li>
-        <li>Select the extracted folder.</li>
-        <li>The extension icon appears in the toolbar.</li>
-      </ol>
-      <hr>
-      <p>✅ Works on all platforms, easier to update manually, and won't be blocked by Chrome.</p>
-    </td>
-  </tr>
-</table>
+Choose the installation method that matches the package you received.
 
+### Option 1: Install from `.crx`
 
-### 📋 Before You Begin
+If you received a `.crx` extension package:
 
-| Requirement | Details |
-|---|---|
-| **Browser** | Google Chrome |
-| **OS** | Windows |
-| **Access** | The official GitHub repository for Productivity Assistant |
-| **Network** | Ability to reach PRS and WAVE sites |
+1. Open Chrome.
+2. Navigate to:
 
-### ✅ Verify the Installation
+   `chrome://extensions`
 
-- The extension icon appears in the toolbar.
-- Click it → the popup opens with the **Current Selections**, **Shift**, and **Breaks** panels.
-- Open PRS / WAVE → the content scripts run and the auto-fill kicks in.
+3. Enable **Developer mode** using the toggle in the top-right corner.
+4. Drag and drop the `.crx` file onto the Extensions page.
+5. Confirm the installation if Chrome displays a security prompt.
+6. Make sure **Productivity Assistant** appears in the extensions list.
+7. Pin the extension to the Chrome toolbar for easy access.
 
-### 🩺 Troubleshooting
+### Option 2: Install from `.zip`
 
-| Problem | Fix |
-|---|---|
-| Extension doesn't appear | Make sure **Developer mode** is on and you loaded the right folder |
-| `.crx` blocked by Chrome | Use **Method 2 (.zip + Load unpacked)** instead |
-| Popup blank | Reload the extension, then reopen the popup |
-| No notifications | Check Windows → Settings → System → Notifications → Google Chrome is allowed and Do Not Disturb is off |
-| WAVE auto-fill not working | Reload the WAVE page once after install |
+If you received the source code as a ZIP file:
 
-### 🔄 Updating the Extension
+1. Extract the ZIP file to a permanent folder.
+2. Open Chrome and navigate to:
 
-- **Method 1** — download the new `.crx` and drag it onto `chrome://extensions` again
-- **Method 2** — replace the contents of the loaded folder, then click the **Reload** icon on the extension card
+   `chrome://extensions`
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the extracted Productivity Assistant folder.
+6. Confirm that the extension appears in the extensions list.
+7. Pin the extension to the toolbar.
 
-### 🗑️ Uninstalling
-
-1. Open `chrome://extensions`
-2. Find **Productivity Assistant**
-3. Click **Remove**
-
-<hr>
-
-
-
-## The extension's popup functionality
-<img src="images/popup.png" alt="Productivity Assistant logo" width="410" height="832" />
-## 🚀 Quick Actions
-
-- **🚀 Launch WAVE** — opens the WAVE site in a single click.
-- **📂 Open PRS Site** — opens the PRS webpage in a single click.
-
-> No more manually copy-pasting URLs or digging through your bookmarks — both sites are always one click away.
+> **Important:** Do not delete or move the extension folder after loading it unpacked. Chrome loads the extension directly from that folder.
 
 ---
 
-## 🟢 Working Status Indicator
+## ✅ Verify Installation
 
-The chip above the timer shows whether or not you are currently logging time:
+After installation, verify that the extension is working correctly.
 
-- 🟢 **"Working"** — the WAVE timer is **on**.
-- ⚪ **"Not Working"** — the WAVE timer is **off**.
+### 1. Check the Extension
+
+Open:
+
+`chrome://extensions`
+
+Confirm that:
+
+- **Productivity Assistant** is listed.
+- The extension is enabled.
+- There are no errors displayed.
+- The extension icon is visible in the Chrome toolbar if pinned.
+
+### 2. Test the Popup
+
+Click the **Productivity Assistant** icon.
+
+The popup should provide access to:
+
+- WAVE working status
+- Current Project, Task, and Subtask
+- Shift schedule
+- Break schedule
+- Save controls
+- Launch WAVE
+- Open PRS
+
+### 3. Test PRS
+
+Open the PRS system and verify that:
+
+- Project, Task, and Subtask selections are remembered.
+- Empty time fields are automatically populated.
+- The productivity calendar appears.
+- Existing PRS entries are detected.
+- Daily productivity information can be viewed.
+
+### 4. Test WAVE
+
+Open WAVE and verify that:
+
+- Project, Task, and Subtask selections are restored.
+- Working status is detected.
+- Start/stop tracking is monitored.
+- Pause/resume tracking is detected.
+- Scheduled notifications work according to the configured shift and break times.
 
 ---
 
-## 📋 Current WAVE Selections
+## 🔄 Updating
 
-The **Current Selections** panel displays your **Project**, **Task**, and **Subtask** exactly as they are saved in Chrome storage. This mirrors what the content script has captured from the WAVE page, so you always know what you're currently working on.
+### Updating a `.crx` Installation
+
+If you receive a newer `.crx` version:
+
+1. Open `chrome://extensions`.
+2. Enable **Developer mode**.
+3. Remove the previous version if Chrome does not allow the new package to replace it.
+4. Drag the new `.crx` file onto the Extensions page.
+5. Confirm that the new version is installed and enabled.
+
+### Updating a "Load unpacked" Installation
+
+If you installed the extension from source:
+
+1. Download or extract the latest version.
+2. Replace the contents of the existing extension folder.
+3. Open:
+
+   `chrome://extensions`
+
+4. Locate **Productivity Assistant**.
+5. Click **Reload**.
+6. Refresh any PRS or WAVE tabs where the extension is being used.
+
+> **Tip:** After an update, refreshing PRS and WAVE tabs ensures that the latest content scripts are loaded.
 
 ---
 
-## ⏰ Shift & Break Times
+# 📖 Overview
 
-You can adjust the time fields to receive notifications at the right moments for **your** shift.
+Productivity Assistant combines productivity tracking, field automation, calendar monitoring, shift reminders, and WAVE timer monitoring into a single Chrome extension.
 
-> ⚠️ The extension ships with **default values for a night shift**. If your schedule differs, change these fields the first time you install the extension.
+It consists of two primary components:
+
+- **PRS Productivity Assistant** — manages PRS entries, productivity history, calendar information, and payroll estimates.
+- **WAVE Timer Reminder** — monitors WAVE working status and provides shift and break reminders.
+
+The extension also provides a popup for managing saved selections and work schedules.
+
+---
+
+# ✨ Features
+
+## 📊 PRS Productivity Assistant
+
+### Smart Field Memory
+
+The extension remembers frequently used PRS selections:
+
+- Project
+- Task
+- Subtask
+
+Saved selections are automatically restored when available, reducing repetitive data entry.
+
+### Automatic Time Filling
+
+When PRS fields are empty, the extension can automatically populate:
 
 | Field | Default |
-|---|---|
-| 🕗 **Shift Start** | `8:00 PM` |
-| 🕔 **Shift Stop** | `5:00 AM` |
-| ☕ **First Break Start** | `11:30 PM` |
-| ☕ **First Break Stop** | `12:00 PM` |
-| ☕ **Second Break Start** | `2:00 AM` |
-| ☕ **Second Break Stop** | `2:30 AM` |
+|---|---:|
+| Start Time | `08:00` |
+| End Time | `17:00` |
+| Break Time | `01:00` |
+| Units Completed | `480` |
 
-> 📌 Remember to update these fields on first install so the reminders fire at the correct times.
+### Productivity Calendar
 
-<hr>
-## The extension's PRS widget functionality
-<img src="images/prs.png" alt="Productivity Assistant logo" width="356" height="475" />
-## 📅 PRS Productivity Calendar
+A floating, draggable calendar provides a visual overview of PRS activity.
 
-The PRS widget embeds itself directly on the PRS webpage when you open the **productivity / create** page.
+The calendar:
 
-### 🗓️ Calendar View
+- Displays the current month.
+- Allows navigation to previous months.
+- Synchronizes productivity data in the background.
+- Aggregates PRS activity by date.
+- Highlights attendance and productivity patterns.
 
-- Displays the **current month** at a glance.
-- **Navigate to previous months** to review your history.
-- **Auto-syncs** with the background scraper, which walks through every page of your productivity table so the calendar always reflects what's actually logged.
-
-### 🎨 Color-Coded Days
+### Calendar Status Colors
 
 | Color | Meaning |
 |---|---|
-| 🟢 **Green** | A PRS entry has been filled for that day |
-| 🔴 **Red** | Weekday with **no** PRS entry |
-| 🟡 **Yellow** | Multiple entries on the same day, or a warning state |
-| 🔵 **Blue** | Saturday worked (more than 2 hours) |
-| ⚪ **Gray** | Weekend, older, or upcoming day |
+| 🟢 Green | PRS entry completed |
+| 🔴 Red | Weekday without a PRS entry |
+| 🔵 Blue | Saturday worked for more than 2 hours |
+| 🟡 Yellow | Warning or unusual activity |
+| ⚪ Gray | Weekend, older, or upcoming date |
 
-### 💰 Estimated Payout
+### Daily Productivity Details
 
-The widget also shows an **estimated payout** for the current month, computed from the standard daily rate for the current pay period.
+Selecting a date opens a detailed view containing:
 
-> ⚠️ **The figure is an estimate.**
->
-> - 📉 It may be **lower** if you don't meet the metrics set for your project.
-> - 📈 It may be **higher** if you exceed the target.
+- PRS entries
+- Daily working hours
+- Break information
+- Productivity information
+- Warnings and exceptions
 
-### 🚧 Work in Progress
+### Automatic Data Synchronization
 
-> The PRS widget is still **under active development**. If you notice any discrepancy in the calculations, please **notify the developer** so it can be corrected.
+A background scraper monitors the PRS productivity table and synchronizes available entries with the extension's calendar data.
 
-<hr>
-## 🗓️ Day Popup
+This allows the calendar to remain updated without requiring manual data entry.
 
-<img src="images/hours.png" alt="Productivity Assistant logo" width="356" height="475" />
+### Productivity Warnings
 
-Click any date on the calendar to open a popup showing **every PRS entry logged for that day**
+The extension identifies potentially problematic entries, including:
 
-### What You'll See
+- Breaks longer than one hour.
+- Working periods exceeding 11 hours.
+- Multiple entries for the same date.
+- Sunday entries.
 
-- **All entries for that date** — each one listed with its details so you can review exactly what was submitted.
-- **Warning reasons** — if the day is coloured yellow, the popup explains *why*:
-  - ⏱️ **Excess hours** — the daily total exceeds the set shift hours.
-  - ☕ **Elongated break** — the break exceeds **1 hour**.
-- **Multiple entries** — a yellow date with a warning like the above means PRS was filled **twice for the same date**.
-
-> 💡 A yellow day isn't just a colour — it's a signal. Open it to see which condition triggered the warning and correct the entry if needed.
-
-<hr>
-## 🔔 Notifications
-
-### ⏰ WAVE Notifications
-
-You'll receive a notification when:
-
-- 🟢 **Your WAVE timer is not running during your shift** — a reminder to start tracking time.
-- <img src="images/shift.png" alt="Productivity Assistant logo" width="356" height="475" />
-- ☕ **The first break begins** — time to pause and step away.
-- <img src="images/break.png" alt="Productivity Assistant logo" width="356" height="475" />
-- ⏱️ **The first break ends** — time to resume tracking.
-- ☕ **The second break begins** — time to pause again.
-- ⏱️ **The second break ends** — time to resume tracking.
-- 🌇 **The shift ends** — a reminder to stop the timer.
-- 🔁 **Every 10 minutes after the shift has ended** — while you are still tracking time.
-- ⚠️ **You try to stop the timer during a shift** — instead of pausing for a break.
-
-### 📋 PRS Notifications
-
-You'll receive a notification when:
-
-- 🕔 **The shift ends** — a reminder to fill in your PRS entry.
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table>
-  <tr>
-    <th width="50%">🧠 PRS Auto-fills</th>
-    <th width="50%">⏰ WAVE Timer Reminder</th>
-  </tr>
-  <tr valign="top">
-    <td>
-
-Automates the PRS productivity flow:
-
-- Remembers **Project / Task / Subtask** picks
-- Auto-fills common fields on load
-- Paints a **live payroll calendar**
-- Syncs data from a hidden background tab
-
-    </td>
-    <td>
-
-Watches the WAVE fill-productivity page and reminds you to start / pause / stop your timer:
-
-- Tracks one boolean: **`workingStatus`**
-- Fires notifications based on your **shift & break schedule**
-- Auto-fills the WAVE dropdowns
-
-    </td>
-  </tr>
-</table>
-
-Both functionalities share the same storage, popup, and service worker. You can use either one, or both together.
+These warnings help identify unusual or potentially incorrect PRS records.
 
 ---
 
+## 💰 Payroll Estimate
 
+The PRS calendar can estimate earnings using the configured pay period.
 
+### Pay Period
 
+The calculation uses a:
 
+**25th → 24th**
 
----
-## ✨ Features
+pay period.
 
-### 🧠 PRS Auto-fills
+### Days Present
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>Smart Field Memory</h4>
-      <p>Your <b>Project</b>, <b>Task</b>, and <b>Subtask</b> selections are saved automatically and restored the next time you open a create page. Never re-pick the same options again.</p>
-      <ul>
-        <li><b>Project</b> — restored from storage, or defaults to the first real project</li>
-        <li><b>Task</b> — restored only if you've saved one</li>
-        <li><b>Subtask</b> — restored only if you've saved one</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h4>Auto-fill on Load</h4>
-      <p>Four common fields are filled the instant the page loads — but only if they're empty, so your own edits are never overwritten.</p>
-      <table width="100%">
-        <tr>
-          <th>Field</th>
-          <th>Value</th>
-        </tr>
-        <tr>
-          <td><code>startTime</code></td>
-          <td><code>08:00</code></td>
-        </tr>
-        <tr>
-          <td><code>endTime</code></td>
-          <td><code>17:00</code></td>
-        </tr>
-        <tr>
-          <td><code>breaktime</code></td>
-          <td><code>01:00</code></td>
-        </tr>
-        <tr>
-          <td><code>units_completed</code></td>
-          <td><code>480</code></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>📅 Live Productivity Calendar</h4>
-      <p>A floating, draggable widget paints a color-coded calendar so you can see your month at a glance.</p>
-      <table width="100%">
-        <tr>
-          <th>Color</th>
-          <th>Meaning</th>
-        </tr>
-        <tr>
-          <td>🔴 Red</td>
-          <td>Weekday, no PRS entry</td>
-        </tr>
-        <tr>
-          <td>🟢 Green</td>
-          <td>PRS filled</td>
-        </tr>
-        <tr>
-          <td>🔵 Blue</td>
-          <td>Saturday worked (&gt; 2h)</td>
-        </tr>
-        <tr>
-          <td>🟡 Yellow</td>
-          <td>Warning state</td>
-        </tr>
-        <tr>
-          <td>⚪ Gray</td>
-          <td>Weekend / older / upcoming</td>
-        </tr>
-      </table>
-    </td>
-    <td width="50%" valign="top">
-      <h4>⚠️ Warning States</h4>
-      <p>Two conditions trigger a <b>yellow</b> day cell and a popup warning:</p>
-      <ul>
-        <li><b>Elongated break</b> — break exceeds <b>1 hour</b></li>
-        <li><b>Excess hours</b> — daily hours exceed <b>11 hours</b></li>
-      </ul>
-      <p>Sundays with entries are flagged as errors too.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>💰 Payroll Summary</h4>
-      <p>Automatic <b>25th &rarr; 24th</b> pay-period math:</p>
-      <ul>
-        <li><b>Days present</b> — weekdays filled + qualifying Saturdays</li>
-        <li><b>Daily rate</b> — <code>monthly pay &divide; weekdays in period</code></li>
-        <li><b>Payroll</b> — <code>daysPresent &times; dailyRate</code></li>
-      </ul>
-      <p>Previous pay period hides during the 1st–24th window.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>🔄 Background Sync</h4>
-      <p>The extension silently scrapes your productivity table, aggregates rows by <code>(date)</code>, and syncs the calendar.</p>
-    </td>
-  </tr>
-</table>
+Days present are calculated from:
+
+- Weekdays with completed PRS entries.
+- Qualifying Saturdays.
+
+### Daily Rate
+
+The estimated daily rate is calculated as:
+
+`Monthly Pay ÷ Weekdays in Pay Period`
+
+### Estimated Payroll
+
+The estimated payroll is calculated as:
+
+`Days Present × Daily Rate`
+
+The previous pay period is hidden during the **1st–24th** of the month where applicable.
+
+> **Note:** Payroll calculations are estimates and should not be treated as official payroll records.
 
 ---
 
-### ⏰ WAVE Timer Reminder
+## ⏰ PRS Shift-End Reminder
 
-The Chrome extension reminds you to start, pause, and stop your WAVE timer — based on your shift and break schedule.
+The extension supports shift-related reminders to help users monitor their scheduled working period and avoid unintentionally extending their shift.
 
-> Everything the WAVE functionality does revolves around **one boolean** stored in `chrome.storage.local`: **`workingStatus`**.
+---
+
+# ⏱️ WAVE Timer Reminder
+
+WAVE Timer Reminder monitors the WAVE interface and helps ensure that the WAVE timer matches the user's working schedule.
+
+## Working Status Tracking
+
+The extension stores the current WAVE state in:
+
+`chrome.storage.local`
+
+The `workingStatus` value represents whether the user is currently working.
 
 | Value | Meaning |
-|:---:|---|
-| 🟢 `true` | The user is working (WAVE timer is running) |
-| ⚪ `false` | The user is not working |
-
-> Every change to `workingStatus` is logged to the service worker console with the **old value**, **new value**, **reason**, and **timestamp**.
-
-#### 🔄 How `workingStatus` Is Set
-
-The content script observes two buttons on the WAVE page:
-
-- 🎬 `#trackBtn` — toggles between **"Start Tracking"** and **"Stop Tracking"**
-- ☕ `#pauseBtn` — toggles between **"Pause (Break)"** and **"Resume Tracking"**
-
-| Button state | `workingStatus` |
-|---|:---:|
-| `pauseBtn` visible + `"Pause (Break)"` | 🟢 **`true`** |
-| `pauseBtn` visible + `"Resume Tracking"` | ⚪ **`false`** |
-| `trackBtn` visible + `"Start Tracking"` | ⚪ **`false`** |
-| `trackBtn` visible + transition `"Stop Tracking"` → `"Start Tracking"` | ⚪ **`false`** |
-
-#### 📅 The Schedule
-
-| Window | Default |
 |---|---|
-| 🕗 **Night Shift** | `20:00` → `05:00` |
-| ☕ **First break** | `00:00` → `00:30` |
-| ☕ **Second break** | `02:30` → `03:00` |
+| `true` | Working / WAVE timer running |
+| `false` | Not working |
 
+State changes are logged with:
 
-#### ⏱️ Alarms
-
-| Alarm | Period | Purpose |
-|---|:---:|---|
-| 🔔 `timerWatch` | **1 min** | Fires schedule-event checks; ensures `statusCheck` exists; runs `checkStatus()` |
-| 🔔 `statusCheck` | **5 min** *(or 10 after shift end)* | Fires the periodic reminders |
-
-#### 🔔 Notifications
-
-All notifications are **Windows-native Chrome notifications** with two buttons: **✔ Dismiss** and **🚀 Open WAVE**.
-
-| Notification | When it fires | Condition |
-|---|---|---|
-| 🌅 **Shift Started** | At `shiftStart` | `workingStatus === false` |
-| ☕ **Break Time** | At `firstBreakStart` and `secondBreakStart` | *Always fires* |
-| ⏱️ **Break Ended** | At `firstBreakStop` and `secondBreakStop` | *Always fires* |
-| 🌇 **Shift Ended** | At `shiftStop` | `workingStatus === true` |
-| ⏰ **Shift Is On** — *"Please start WAVE timer"* | Every 5 minutes | Inside shift + `workingStatus === false` + not during a break |
-| 🌇 **Shift ended at {HH:MM}, kindly stop the timer** | Every 10 minutes after shift end | `workingStatus === true` |
-| ⚠️ **Can't Stop Tracking Yet** | Stop Tracking clicked inside a protected window | Message from content script |
-
-> 🧹 **Every new notification clears all existing extension notifications first.** There is never more than one extension notification visible at a time.
-
-> 📌 **Once-per-day guard** — shift-start, all four break notifications, and shift-stop fire at most once per day, keyed by `scheduleState`. The **⏰ Please start WAVE timer** and **🌇 Shift ended…** reminders repeat on their cadence.
-
-#### 🔍 The Two Periodic Checks
-
-**🕐 `checkScheduleEvents()` — every minute:** evaluates the current minute against `shiftStart`, `shiftStop`, and the four break times (±1 min tolerance).
-
-**🕔 `checkStatus()` — every 5 minutes *(or 10)*:**
-
-| Mode | Condition | Action |
-|---|---|---|
-| 🅰️ **Idle during shift** | Inside shift + `workingStatus === false` + not during break | **⏰ Please start WAVE timer** |
-| 🅱️ **Post-shift working** | After shift end + `workingStatus === true` | **🌇 Shift ended at {HH:MM}…** (10-min cadence) |
-| 🅲 **Outside shift, idle** | Outside shift + `workingStatus === false` + not during break | No notification (alarm stays armed) |
-
-
-#### ✍️ WAVE Auto-Fill
-
-On page load, the content script restores the user's last-selected **project / task / subtask** from storage:
-
-1. ⏳ Waits up to **3–4 seconds** for each `<select>` to populate
-2. ↩️ Restores the saved value if it exists
-3. ➡️ Falls back to the **first available option** otherwise
-
-Retries up to **3 times**, **2 s apart**. Every change is written back to storage with its display name. While `workingStatus === true`, selections refresh **every 2 seconds**.
+- Previous value
+- New value
+- Reason
+- Timestamp
 
 ---
 
-## 🪟 The Popup
+## WAVE Button Monitoring
 
-The popup is **shared by both functionalities** and shows:
+The WAVE content script monitors:
 
-- 🟢 **Status chip** (*Working* / *Not working*) driven by `workingStatus`
-- 📋 Current **project / task / subtask** names
-- ⏰ Editable **shift and break times** (with a *"✅ Saved"* indicator)
-- 🚀 **Launch** button that opens WAVE and closes the popup
+- `#trackBtn`
+- `#pauseBtn`
 
-> Any click anywhere in the popup **clears all extension notifications**.
+### Pause Button
 
-
-
-
----
-
-
-## 🎬 End-to-End Example (WAVE)
-
-> Shift `20:00 → 05:00` · First break `00:00 → 00:30` · Second break `02:30 → 03:00`
-
-| Time | Event | `workingStatus` | Notification |
-|:---:|---|:---:|---|
-| `19:55` | — | ⚪ `false` | — |
-| `20:00` | Shift starts | ⚪ `false` | 🌅 Shift Started |
-| `20:05` | 5-min tick | ⚪ `false` | ⏰ Please start WAVE timer |
-| `20:15` | User clicks **Start Tracking** | ⚪ `false` | — |
-| `20:30` | User clicks **Pause (Break)** | 🟢 `true` | — |
-| `00:00` | First break starts | 🟢 `true` | ☕ Break Time |
-| `00:15` | User clicks **Resume Tracking** | ⚪ `false` | — |
-| `00:30` | First break ends | ⚪ `false` | ⏱️ Break Ended |
-| `02:30` | Second break starts | 🟢 `true` | ☕ Break Time |
-| `03:00` | Second break ends | ⚪ `false` | ⏱️ Break Ended |
-| `03:05` | 5-min tick | ⚪ `false` | ⏰ Please start WAVE timer |
-| `05:00` | Shift ends | ⚪ `false` | — |
-| **Alt scenario** | | | |
-| `05:00` | Shift ends | 🟢 `true` | 🌇 Shift Ended |
-| `05:10` | Still working | 🟢 `true` | 🌇 Shift ended at 05:00… |
-| `05:30` | User clicks **Resume Tracking** | ⚪ `false` | — |
-
----
-
-## 🚀 Roadmap
-
-### 📊 Supervisor & Team Lead Dashboard
-
-<div align="center">
-
-| Feature | Description |
+| Button State | Working Status |
 |---|---|
-| 🧑‍💼 **Supervisor Portal** | Web dashboard where supervisors log in with their team code to view real-time status of every employee. |
-| 🟢 **Live Attendance** | See who is **Working**, on **Break**, or **Offline** — updated every 30 seconds. |
-| ⚠️ **Idle Alerts** | Highlight employees inside their shift window who haven't started the WAVE timer for > 15 min. |
-| 📉 **Compliance Report** | Daily summary: % shift time tracked, missed days, average break duration. |
-| 🔔 **One-Click Nudge** | Push a notification to a specific employee's browser: *"Please start your timer."* |
-| 📤 **CSV Export** | Export attendance and productivity per team / week / month. |
-| 🎯 **Team Heatmap** | Calendar-style heatmap of team-wide productivity. |
-| 📈 **Leaderboards** | Optional gamified rankings by hours logged and units completed. |
+| `Pause (Break)` | `true` |
+| `Resume Tracking` | `false` |
 
-</div>
+### Tracking Button
 
-### 🛠 Other Improvements
+| Button State | Working Status |
+|---|---|
+| `Start Tracking` | `false` |
+| Stop Tracking → Start Tracking | `false` |
 
-- [ ] **Dark mode** for the popup and in-page widgets
-- [ ] **Localisation** — additional languages
-- [ ] **Voice reminders** — optional TTS for shift start/stop
-- [ ] **Slack / Teams integration** — push reminders to team channels
+This allows the extension to maintain an accurate representation of the WAVE timer state.
 
 ---
 
-## 🤝 Contributing - Developer notes
+## 🔄 WAVE Auto-Fill
 
-Contributions are welcome!
+The extension automatically restores:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
----
+- Project
+- Task
+- Subtask
 
-## 🏗️ Architecture
+When WAVE loads, the extension:
 
-<table>
-  <tr>
-    <th>Component</th>
-    <th>File</th>
-    <th>Role</th>
-  </tr>
-  <tr>
-    <td>🔧 **Service Worker**</td>
-    <td>`background.js`</td>
-    <td>Owns the schedule, the state, and all notifications</td>
-  </tr>
-  <tr>
-    <td>🌐 **Content Scripts**</td>
-    <td>`prs-content.js` · `wave-content.js`</td>
-    <td>Injected into the PRS / WAVE pages; observe DOM, mirror state into storage</td>
-  </tr>
-  <tr>
-    <td>🪟 **Popup**</td>
-    <td>`popup.html` / `popup.js`</td>
-    <td>Shows current status, current selections, and shift/break editors</td>
-  </tr>
-  <tr>
-    <td>🎨 **Styles**</td>
-    <td>`styles.css`</td>
-    <td>Glossy popup theme and in-page widget styling</td>
-  </tr>
-</table>
----
----
+1. Waits for the selection fields to appear.
+2. Attempts to restore the saved values.
+3. Retries if the fields are not immediately available.
+4. Falls back to the first available option when a saved value cannot be found.
+5. Saves changes when selections are manually changed.
+6. Stores both selection IDs and display names.
 
-## 🗄️ Storage Keys
+The extension retries up to three times with approximately two-second intervals.
 
-| Key | Site | Purpose |
-|---|---|---|
-| `savedProjectId` / `savedTaskId` / `savedSubtaskId` | PRS | Persisted dropdown selections |
-| `prsCalendar` | PRS | Scraped calendar data |
-| `workingStatus` | WAVE | Single source of truth for timer state |
-| `assignedProject*` / `assignedTask*` / `assignedSubtask*` | WAVE | Live WAVE form selections |
-| `shiftStart`, `shiftStop`, `firstBreak*`, `secondBreak*` | WAVE | Schedule config |
-| `scheduleState` | WAVE | Once-per-day notification fired flags |
-| `currentNotificationId` | WAVE | Currently displayed notification ID |
-| `lastPleaseStartAlert` / `lastPostShiftAlert` | WAVE | Reminder cooldown timestamps |
+While working, selections can be refreshed periodically to keep the stored state synchronized.
 
 ---
 
-## 🛡️ Reliability Mechanisms (WAVE)
+# 🕐 Shift & Break Scheduling
 
-1. 🔁 **Top-level boot IIFE** — runs on every service-worker boot (install, update, reload, browser start, first wake-up)
-2. ⏱️ **`timerWatch` every minute** — the reliable heartbeat
-3. 📥 **Storage change listener** — re-evaluates on every `workingStatus` change
-4. 💤 **`chrome.idle`** — re-evaluates on screen unlock
-5. 🩹 **Self-healing alarms** — recreated on every tick
-6. 🔒 **Pure reads in `checkStatus`** — no side effects, no races
-7. 🧹 **Prefix-scoped notification clearing** — only the extension's own notifications are cleared
+Shift and break times can be configured through the extension popup.
 
+The schedule can include:
 
+- Shift start
+- Shift end
+- First break start
+- First break end
+- Second break start
+- Second break end
 
-## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
+The configured schedule controls WAVE reminders and status checks.
 
 ---
 
-<div align="center">
+# 🔔 Notifications
 
-### ⚡ Developer
+Productivity Assistant uses Chrome's native notification system to remind users about important schedule events.
 
-This tool was developed by **Collins Mrumba**
+### Shift Started
 
-**[⬆ Back to Top](#-productivity-assistant)**
+Triggered at the configured shift start time when WAVE is not running.
 
-<sub>Made with ❤️ for teams that value their time.</sub>
+### Break Time
 
-</div>
+Triggered when a scheduled break begins.
+
+### Break Ended
+
+Triggered when a scheduled break ends.
+
+### Shift Ended
+
+Triggered at the configured shift end time when WAVE is still running.
+
+### Start WAVE Reminder
+
+If the shift is active and WAVE has not been started, the extension periodically reminds the user to start the timer.
+
+### Post-Shift Reminder
+
+If WAVE remains active after the scheduled shift ends, the extension periodically reminds the user that the shift has ended.
+
+### Protected Stop Notification
+
+When stopping WAVE is restricted during a protected period, the extension can display:
+
+**Can't Stop Tracking Yet**
+
+---
+
+## 🔔 Notification Controls
+
+Notifications can include:
+
+- **Dismiss**
+- **Open WAVE**
+
+The extension ensures that only one extension notification is displayed at a time.
+
+When a new extension notification is displayed, the previous extension notification is cleared.
+
+Clicking the extension popup also clears extension notifications where applicable.
+
+Daily schedule events use state guards to prevent the same shift or break notification from repeatedly triggering.
+
+---
+
+# 🖥️ Extension Popup
+
+The popup provides a central interface for managing the extension.
+
+It displays:
+
+### Working Status
+
+- Working
+- Not Working
+
+### Current Selections
+
+- Project
+- Task
+- Subtask
+
+### Schedule Settings
+
+- Shift start
+- Shift end
+- First break
+- Second break
+
+### Actions
+
+- Save schedule
+- Launch WAVE
+- Open PRS
+
+The popup also provides feedback when settings have been successfully saved.
+
+---
+
+# ⚙️ How It Works
+
+The extension uses several coordinated components.
+
+### PRS Workflow
+
+1. PRS loads in Chrome.
+2. The content script detects relevant fields and productivity data.
+3. Saved selections are restored.
+4. Empty fields are automatically populated where configured.
+5. Productivity data is synchronized.
+6. Calendar information is updated.
+7. Daily entries and warnings are calculated.
+8. Payroll estimates are generated from the configured pay period.
+
+### WAVE Workflow
+
+1. WAVE loads in Chrome.
+2. The content script detects Project, Task, and Subtask fields.
+3. Saved selections are restored.
+4. WAVE tracking controls are monitored.
+5. Working status is updated.
+6. Background alarms monitor the configured schedule.
+7. Shift and break events trigger notifications.
+8. Post-shift and missing-timer conditions are monitored.
+
+---
+
+# 🛡️ Reliability & Self-Healing
+
+The extension includes several mechanisms designed to improve reliability.
+
+### Service Worker Boot
+
+A top-level initialization routine ensures that required background functionality is registered when the service worker starts.
+
+### Timer Watch
+
+The `timerWatch` alarm acts as a periodic heartbeat and checks scheduled events.
+
+### Status Checks
+
+The `statusCheck` alarm periodically verifies WAVE status after the shift begins.
+
+### Storage Monitoring
+
+A storage-change listener responds when relevant settings or working-state values change.
+
+### Chrome Idle Monitoring
+
+The extension can monitor Chrome's idle state where required by its workflow.
+
+### Self-Healing Alarms
+
+Expected alarms can be recreated if they are missing.
+
+### Safe Status Checks
+
+Status checks favor pure reads where possible to reduce unnecessary state changes.
+
+### Notification Management
+
+Notifications are tracked using an active notification ID and cleared using extension-specific notification handling.
+
+---
+
+# 🏗️ Architecture
+
+```text
+Productivity Assistant
+│
+├── background.js
+│   └── Service worker
+│       ├── WAVE scheduling
+│       ├── Alarms
+│       ├── Notifications
+│       ├── Working-status monitoring
+│       └── Reliability / self-healing
+│
+├── prs-content.js
+│   └── PRS automation
+│       ├── Field memory
+│       ├── Auto-fill
+│       ├── Productivity scraping
+│       ├── Calendar
+│       └── Payroll estimates
+│
+├── wave-content.js
+│   └── WAVE automation
+│       ├── Field restoration
+│       ├── Button monitoring
+│       └── Working-status detection
+│
+├── popup.html
+│   └── Extension interface
+│
+├── popup.js
+│   └── Popup logic
+│
+├── styles.css
+│   └── Popup styling
+│
+└── images/
+    ├── logo128.png
+    ├── prs.png
+    ├── hours.png
+    ├── popup.png
+    ├── shift.png
+    └── break.png
+```
+
+---
+
+# 🗄️ Storage
+
+The extension uses Chrome local storage for configuration and runtime state.
+
+| Key | Purpose |
+|---|---|
+| `savedProjectId` | Saved Project |
+| `savedTaskId` | Saved Task |
+| `savedSubtaskId` | Saved Subtask |
+| `prsCalendar` | PRS calendar/productivity data |
+| `workingStatus` | Current WAVE working state |
+| `assignedProject*` | WAVE project information |
+| `assignedTask*` | WAVE task information |
+| `assignedSubtask*` | WAVE subtask information |
+| `shiftStart` | Shift start time |
+| `shiftStop` | Shift end time |
+| `firstBreak*` | First break schedule |
+| `secondBreak*` | Second break schedule |
+| `scheduleState` | Daily schedule-event state |
+| `currentNotificationId` | Active notification |
+| `lastPleaseStartAlert` | Last start-WAVE reminder |
+| `lastPostShiftAlert` | Last post-shift reminder |
+
+---
+
+# 🖼️ Screenshots
+
+## PRS Productivity Calendar
+
+![PRS Productivity Calendar](images/prs.png)
+
+## Daily Hours & Productivity Details
+
+![Daily Hours](images/hours.png)
+
+## Extension Popup
+
+![Productivity Assistant Popup](images/popup.png)
+
+## Shift Schedule
+
+![Shift Schedule](images/shift.png)
+
+## Break Schedule
+
+![Break Schedule](images/break.png)
+
+---
+
+# 🧭 Quick Reference
+
+| Function | PRS | WAVE |
+|---|:---:|:---:|
+| Remember Project | ✓ | ✓ |
+| Remember Task | ✓ | ✓ |
+| Remember Subtask | ✓ | ✓ |
+| Automatic field filling | ✓ | ✓ |
+| Working-status tracking | — | ✓ |
+| Productivity calendar | ✓ | — |
+| Daily productivity details | ✓ | — |
+| Productivity warnings | ✓ | — |
+| Payroll estimate | ✓ | — |
+| Shift scheduling | ✓ | ✓ |
+| Break scheduling | ✓ | ✓ |
+| Native notifications | — | ✓ |
+| Popup controls | ✓ | ✓ |
+
+---
+
+# 🛠️ Troubleshooting
+
+## Extension does not appear
+
+Open:
+
+`chrome://extensions`
+
+Confirm that:
+
+- Developer mode is enabled when using an unpacked or `.crx` installation.
+- The extension is installed.
+- The extension is enabled.
+- Chrome does not display an extension error.
+
+## PRS fields are not automatically filled
+
+Try:
+
+1. Refreshing the PRS page.
+2. Opening the extension popup.
+3. Checking that Project, Task, and Subtask values are saved.
+4. Selecting the fields manually once and allowing the extension to save them.
+
+## WAVE selections are not restored
+
+Try:
+
+1. Refreshing WAVE.
+2. Waiting for the page to finish loading.
+3. Checking the saved Project, Task, and Subtask.
+4. Opening the popup and confirming the saved selections.
+
+## Notifications are not appearing
+
+Check:
+
+- Chrome notification permissions.
+- Shift and break schedule settings.
+- WAVE working status.
+- Whether the extension is enabled.
+- Whether another extension notification is currently active.
+
+Then reload the extension from:
+
+`chrome://extensions`
+
+## Extension stopped working after an update
+
+After updating:
+
+1. Reload the extension.
+2. Refresh PRS.
+3. Refresh WAVE.
+4. Reopen the extension popup.
+5. Confirm the schedule and saved selections.
+
+---
+
+# 🗑️ Uninstalling
+
+To remove Productivity Assistant:
+
+1. Open:
+
+   `chrome://extensions`
+
+2. Locate **Productivity Assistant**.
+3. Click **Remove**.
+4. Confirm the removal.
+
+If you installed the extension as an unpacked extension, you can also delete the local extension folder after removing it from Chrome.
+
+---
+
+# 🔮 Roadmap
+
+Planned improvements may include:
+
+- Supervisor portal
+- Team dashboard
+- Live attendance and working-status monitoring
+- Idle alerts
+- Compliance reports
+- One-click supervisor nudges
+- CSV export
+- Team productivity heatmaps
+- Productivity leaderboards
+- Dark mode
+- Localization
+- Voice reminders
+- Slack integration
+- Microsoft Teams integration
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, bug reports, and feature requests are welcome.
+
+When submitting an issue or pull request, provide:
+
+- A clear description of the problem or feature.
+- Steps to reproduce the issue where applicable.
+- Relevant screenshots or error messages.
+- Chrome version.
+- Extension version.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Developer
+
+**Collins Mrumba**
+
+Built to simplify productivity tracking, automate repetitive tasks, and help users maintain accurate PRS and WAVE work records.
