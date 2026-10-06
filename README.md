@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="images/logo128.png" alt="Productivity Assistant logo" width="120" height="120" />
+</div>
 # Productivity Assistant
 
 A Chrome Manifest V3 extension that improves productivity tracking and time management across **PRS Productivity Assistant** and **WAVE Timer Reminder**.
